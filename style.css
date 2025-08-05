@@ -191,8 +191,13 @@ footer {
   font-weight: 700;
   font-size: 1.6rem;
   margin-left: 10px;
-  text-shadow: 1px 1px 4px #89c2f5;
+  text-shadow:
+    -1px -1px 0 #2e86c1,
+     1px -1px 0 #2e86c1,
+    -1px  1px 0 #2e86c1,
+     1px  1px 0 #2e86c1;
 }
+
 
 .logo-area {
   margin-bottom: 10px;
