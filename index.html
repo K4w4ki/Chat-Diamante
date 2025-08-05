@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Equipe Girassol 🌻 | Atendimento Diamante 💎</title>
+<link href="https://emojiapi.dev/api/v1/1f33b.svg" rel="icon" type="image/svg+xml"/>
+
+<link href="style.css" rel="stylesheet"/></head>
+<body>
+<header>
+<div class="supervisora">👩‍💼 Supervisora: <strong>Maria Alice</strong></div>
+<div class="Autor">💎 Autor : <strong>Albert Dias</strong></div>
+<div class="Atendimento">🌻 Atendimento </div>
+<div class="logo-area">
+<h1>
+<span class="logo-girassol">🌻 Equipe Girassol</span>
+<span class="logo-diamante">• Chat Diamante 💎</span>
+</h1>
+</div>
+<div class="search-wrapper">
+<input id="searchInput" placeholder="Buscar scripts de atendimento..." type="text"/>
+<div class="search-icon"></div>
+</div>
+</header>
+<!-- Emojis que aparecem com scroll -->
+<!-- Muitos emojis que aparecem com o scroll -->
+<div class="scroll-emoji" style="top: 200px; left: 5%;">🌻</div>
+<div class="scroll-emoji" style="top: 400px; right: 10%;">💎</div>
+<div class="scroll-emoji" style="top: 600px; left: 15%;">🌻</div>
+<div class="scroll-emoji" style="top: 800px; right: 20%;">💎</div>
+<div class="scroll-emoji" style="top: 1000px; left: 25%;">🌻</div>
+<div class="scroll-emoji" style="top: 1200px; right: 30%;">💎</div>
+<div class="scroll-emoji" style="top: 1400px; left: 35%;">🌻</div>
+<div class="scroll-emoji" style="top: 1600px; right: 40%;">💎</div>
+<div class="scroll-emoji" style="top: 1800px; left: 45%;">🌻</div>
+<div class="scroll-emoji" style="top: 2000px; right: 50%;">💎</div>
+<div class="scroll-emoji" style="top: 2200px; left: 55%;">🌻</div>
+<div class="scroll-emoji" style="top: 2400px; right: 60%;">💎</div>
+<div class="scroll-emoji" style="top: 2600px; left: 65%;">🌻</div>
+<div class="scroll-emoji" style="top: 2800px; right: 70%;">💎</div>
+<div class="scroll-emoji" style="top: 3000px; left: 75%;">🌻</div>
+<div class="scroll-emoji" style="top: 3200px; right: 80%;">💎</div>
+<div class="center-btn-container">
+<button class="create-btn" id="addScriptBtn">➕ Novo Balão</button>
+</div>
+<div class="modal" id="newScriptModal">
+<div class="modal-content">
+<h2>Adicionar Novo Balão</h2>
+<input id="newTitle" placeholder="Título" type="text"/>
+<textarea id="newContent" placeholder="Informação detalhada..."></textarea>
+<button id="saveScriptBtn">💾 Salvar</button>
+</div>
+</div>
+<!-- Botão flutuante -->
+<button id="botaoPausa">🕒 Pausas</button>
+<!-- Painel de configurações -->
+<div id="painelPausa">
+<div class="conteudo">
+<h2>Meus Horários de Pausa</h2>
+<input id="horarioInput" type="time"/>
+<button onclick="adicionarHorario()">Adicionar Horário</button>
+<div id="listaHorarios"></div>
+<button onclick="fecharPainel()">Fechar</button>
+</div>
+</div>
+<!-- Painel de aviso -->
+<div id="avisoPausa">
+<div class="caixa">
+<h2>⏰ Sua pausa está chegando!</h2>
+<p>Faltam 5 minutos para sua pausa programada.</p>
+<button id="botaoTudoBem">Tudo bem!</button>
+</div>
+</div>
+<!-- Painel de confirmação -->
+<div id="confirmModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:9999;">
+<div style="background:white; padding:30px; border-radius:12px; text-align:center; max-width:400px; width:90%;">
+<h2 style="margin-bottom:20px;">Tem certeza que deseja deletar este balão?</h2>
+<button id="confirmDeleteBtn" style="background-color:#2ecc71; color:white; border:none; padding:10px 20px; margin-right:10px; border-radius:8px; cursor:pointer; font-weight:bold;">Sim</button>
+<button id="cancelDeleteBtn" style="background-color:#e67e22; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-weight:bold;">Não</button>
+</div>
+</div>
+<!-- Modal de Edição -->
+<div class="modal" id="editModal">
+<div class="modal-content">
+<h2>Editar Balão</h2>
+<input id="editTitle" placeholder="Título" type="text"/>
+<textarea id="editContent" placeholder="Conteúdo..."></textarea>
+<button id="saveEditBtn">Salvar Edição</button>
+</div>
+</div>
+<!-- Mascote - Diamante -->
+<div id="mascote">
+<div id="fala-do-mascote"> Olá Girassol 🌻</div>
+<div>🤠</div>
+</div>
+<main id="content">
+<!-- Os blocos de script virão aqui via JS -->
+</main>
+<footer>
+<p>✨ Equipe Girassóis • Atendimento com brilho e carinho 💛💎</p>
+</footer>
+
+<script src="script.js"></script></body>
+</html>
