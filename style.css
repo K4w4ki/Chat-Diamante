@@ -699,16 +699,49 @@ button.create-btn:hover {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 40px;
+  border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
   z-index: 1001;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* necessário para esconder o brilho fora do botão */
+  transition: background 0.3s ease;
 }
 
+/* Cria o brilho */
+#botaoPausa::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+}
+
+/* Ativa a animação ao passar o mouse */
 #botaoPausa:hover {
-  background: #29AB87;
+  background: #1E90FF; /* azul */
+}
+
+#botaoPausa:hover::before {
+  animation: brilhoPassando 0.6s ease forwards;
+}
+
+/* Animação do brilho */
+@keyframes brilhoPassando {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
 }
 
 #painelPausa {
