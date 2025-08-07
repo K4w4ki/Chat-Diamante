@@ -183,7 +183,12 @@ footer {
   color: white;
   font-weight: 900;
   font-size: 2.2rem;
-  text-shadow: 2px 2px 5px #f6d365;
+  text-shadow:
+    -1px -1px 0 #5d4037,  /* topo esquerda */
+     1px -1px 0 #5d4037,  /* topo direita */
+    -1px  1px 0 #5d4037,  /* baixo esquerda */
+     1px  1px 0 #5d4037,  /* baixo direita */
+     0px  0px 6px #8d6e63; /* leve brilho marrom claro */
 }
 
 .logo-diamante {
