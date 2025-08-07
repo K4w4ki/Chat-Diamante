@@ -88,7 +88,6 @@ header h1 {
 
 
 
-
 main {
   padding: 2rem;
   display: grid;
@@ -188,15 +187,16 @@ footer {
 }
 
 .logo-diamante {
-  color: #1e90ff;
+  color: #add8ff; /* azul claro (mais suave) */
   font-weight: 700;
   font-size: 1.6rem;
   margin-left: 10px;
   text-shadow:
-    -1px -1px 0 #2e86c1,
-     1px -1px 0 #2e86c1,
-    -1px  1px 0 #2e86c1,
-     1px  1px 0 #2e86c1;
+    -1px -1px 0 #0058b0, /* azul forte */
+     1px -1px 0 #0058b0,
+    -1px  1px 0 #0058b0,
+     1px  1px 0 #0058b0,
+    0px  0px 2px #0058b0; /* leve brilho */
 }
 
 
@@ -447,7 +447,7 @@ header h1 {
 }
 
 button.create-btn:hover {
-  background-color: #f39c12 !important; /* laranja escuro */
+  background-color:  #8b5c2c !important; /* laranja escuro */
 }
 
 
@@ -455,23 +455,29 @@ button.create-btn:hover {
   content: "";
   position: absolute;
   top: 0;
-  left: -75%;
-  width: 50%;
+  left: -100%;
+  width: 60%;
   height: 100%;
-  background: linear-gradient(120deg, rgba(255,255,255,0.4), rgba(255,255,255,0));
-  transform: skewX(-25deg);
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  filter: blur(2px);
 }
 
 .create-btn:hover::before {
-  animation: shine 0.75s ease forwards;
+  animation: brilhoMelhorado 0.6s ease-out forwards;
 }
 
-@keyframes shine {
+@keyframes brilhoMelhorado {
   0% {
-    left: -75%;
+    left: -100%;
   }
   100% {
-    left: 125%;
+    left: 120%;
   }
 }
 
@@ -744,6 +750,7 @@ button.create-btn:hover {
   }
 }
 
+
 #painelPausa {
   position: fixed;
   inset: 0;
@@ -895,4 +902,3 @@ button.create-btn:hover {
 #botaoTudoBem:hover {
   background: #2ecc71;
 }
-
