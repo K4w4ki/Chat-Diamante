@@ -292,7 +292,7 @@ header h1 {
 }
 
 #addScriptBtn {
-  background-color: #27ae60;
+  background-color: #228B22;
   color: white; 
   border: none;
   padding: 12px 24px;
@@ -706,7 +706,7 @@ button.create-btn:hover {
   position: fixed;
   top: 10px;
   right: 10px;
-  background: #228B22;
+  background: #145a32;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -738,7 +738,7 @@ button.create-btn:hover {
 
 /* Ativa a animação ao passar o mouse */
 #botaoPausa:hover {
-  background: #1E90FF; /* azul */
+  background: #8b4513; /* verde */ 
 }
 
 #botaoPausa:hover::before {
@@ -755,115 +755,139 @@ button.create-btn:hover {
   }
 }
 
-
+/* Painel de Pausa — Moderno e Profissional */
 #painelPausa {
+  display: none;
   position: fixed;
   inset: 0;
-  display: none;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 1002;
-  font-family: 'Segoe UI', sans-serif;
+  animation: fadeInPainel 0.3s ease;
 }
 
 #painelPausa .conteudo {
-  background: #fff;
-  border-radius: 16px;
-  padding: 2.5rem 2rem;
-  width: 92%;
-  max-width: 460px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #fffbe6 0%, #fff0c1 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  width: clamp(320px, 90%, 420px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
   text-align: center;
-  color: #333;
-  animation: fadeIn 0.3s ease;
-  border: none;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
+
+/* Decoração sutil */
+#painelPausa .conteudo::before,
+#painelPausa .conteudo::after {
+  position: absolute;
+  font-size: 2.2rem;
+  opacity: 0.2;
+  pointer-events: none;
+}
+#painelPausa .conteudo::before { content: '🌻'; top: 10px; left: 15px; }
+#painelPausa .conteudo::after { content: '💎'; bottom: 10px; right: 15px; }
 
 #painelPausa h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  color: #f57c00; /* Laranja vibrante */
+  font-size: 1.5rem;
+  color: #4a3b00;
+  margin: 0 0 0.5rem;
 }
 
-#painelPausa input {
-  width: 100%;
-  background: #f9f9f9;
-  border: 2px solid #ffc107; /* Amarelo */
-  padding: 14px;
+#painelPausa input[type="time"] {
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #f6d365;
+  background: white;
   font-size: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  color: #333;
-  transition: 0.3s ease;
+  width: 80%;
+  transition: border-color 0.3s ease;
 }
-
-#painelPausa input:focus {
-  border-color: #f57c00;
+#painelPausa input[type="time"]:focus {
+  border-color: #f0932b;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(245, 124, 0, 0.2);
 }
 
-#painelPausa button {
-  background: #43a047; /* Verde moderno */
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  margin-top: 10px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(67, 160, 71, 0.25);
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-#painelPausa button:hover {
-  background: #388e3c;
-  transform: scale(1.03);
-}
-
-#listaHorarios {
-  margin-top: 2rem;
-  text-align: left;
-}
-
+/* Cada item da lista de horários com mais espaçamento e alinhamento */
 #listaHorarios div {
-  background: #fff8e1; /* Amarelo pastel */
-  padding: 12px 16px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  font-weight: 500;
-  color: #5d4037;
+  background: rgba(255,255,255,0.9);
+  padding: 8px 14px;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-weight: 600;
+  color: #4a3b00;
+  min-width: 280px;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-left: 4px solid #f57c00;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  justify-content: space-between; /* separa horário e botão */
+  gap: 8px; /* espaço entre horário e botão */
+  margin-bottom: 15px; /* distância entre horários */
+
 }
 
-#listaHorarios button {
+/* Botão de apagar dentro do item */
+#listaHorarios div button {
   background: none;
   border: none;
-  color: #d84315; /* vermelho queimado */
-  font-weight: 600;
-  font-size: 0.95rem;
+  color: #8b4513;
+  font-size: 1rem;
   cursor: pointer;
-  padding: 4px 6px;
-  border-radius: 6px;
-  transition: background 0.2s ease;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
-#listaHorarios button:hover {
-  background: rgba(216, 67, 21, 0.1);
+/* Força o X do botão de apagar horário a ficar branco */
+#listaHorarios div button {
+  color: white !important;
+  font-weight: bold;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Mantém branco mesmo no hover */
+#listaHorarios div button:hover {
+  background-color: #8b4513 !important; /* marrom */
+  color: white !important;
 }
 
+/* Botões do painel de pausa */
+#painelPausa .conteudo button {
+  color: white !important; /* força texto branco */
+}
+
+/* Mantém branco no hover também */
+#painelPausa .conteudo button:hover {
+  color: white !important;
+}
+
+
+
+#listaHorarios div button:hover {
+  transform: scale(1.2);
+  color: #8b4513;
+}
+
+/* Botões */
+#painelPausa .conteudo button {
+  background-color: #f6b93b;
+  color: #2d3436;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.2s ease;
+  margin-top: 0.10px; /* diminui o espaço só no último botão */
+}
+#painelPausa .conteudo button:hover {
+  background-color: #8b4513; /* Marrom escuro */
+  color: white;
+  transform: translateY(-2px);
+}
 
 /* Painel de alerta */
 #avisoPausa {
