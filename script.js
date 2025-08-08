@@ -1181,6 +1181,34 @@ function notificarPausa() {
   }
 }
 
+// Histórico de pesquisas
+let historico = JSON.parse(localStorage.getItem("historicoPesquisa") || "[]");
+
+function atualizarDatalist() {
+  const dataList = document.getElementById("historicoPesquisa");
+  dataList.innerHTML = "";
+  historico.forEach(item => {
+    const option = document.createElement("option");
+    option.value = item;
+    dataList.appendChild(option);
+  });
+}
+
+// Salvar no histórico ao pressionar Enter
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    const valor = searchInput.value.trim();
+    if (valor && !historico.includes(valor)) {
+      historico.unshift(valor);
+      if (historico.length > 10) historico.pop(); // limita a 10 pesquisas
+      localStorage.setItem("historicoPesquisa", JSON.stringify(historico));
+      atualizarDatalist();
+    }
+  }
+});
+
+atualizarDatalist();
+
+
 window.addEventListener('scroll', revelarEmojisScroll);
 window.addEventListener('load', revelarEmojisScroll); // já revela os primeiros ao carregar
-
