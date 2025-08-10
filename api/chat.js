@@ -31,7 +31,7 @@ export default async function handler(req, res) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${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}`
+        "Authorization": `Bearer ${OPENAI_KEY}`
       },
       body: JSON.stringify(payload)
     });
@@ -53,3 +53,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Server error", detail: err.message });
   }
 }
+
