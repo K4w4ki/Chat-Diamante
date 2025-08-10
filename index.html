@@ -68,6 +68,31 @@
 <button onclick="fecharPainel()">Fechar</button>
 </div>
 </div>
+
+<!-- BOTÃO CHATBOT -->
+<button id="botaoChat" title="Abrir ChatBot" aria-label="Abrir ChatBot">💬 ChatBot</button>
+
+<!-- PAINEL DO CHAT -->
+<div id="painelChat" class="modal">
+  <div class="modal-content chat-panel" role="dialog" aria-modal="true" aria-label="ChatBot">
+    <header class="chat-header">
+      <div class="chat-title">Chat Diamante 💬</div>
+      <button id="fecharChat" class="close-btn" aria-label="Fechar chat">✖</button>
+    </header>
+
+    <main id="chatMessages" class="chat-messages" aria-live="polite"></main>
+
+    <form id="chatForm" class="chat-form" autocomplete="off">
+      <input id="chatInput" type="text" placeholder="Digite sua mensagem e pressione Enter..." aria-label="Mensagem"/>
+      <button type="submit" id="sendBtn">Enviar</button>
+    </form>
+  </div>
+</div>
+
+<script src="chat.js"></script>
+
+
+
 <!-- Painel de aviso -->
 <div id="avisoPausa">
 <div class="caixa">
