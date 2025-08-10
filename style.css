@@ -738,7 +738,7 @@ button.create-btn:hover {
 
 /* Ativa a animação ao passar o mouse */
 #botaoPausa:hover {
-  background: #8b4513; /* verde */ 
+  background: #66BB66; /* verde */ 
 }
 
 #botaoPausa:hover::before {
@@ -933,21 +933,52 @@ button.create-btn:hover {
 }
 
 /* ===== ChatBot styles ===== */
+
 #botaoChat {
   position: fixed;
-  top: 70px;
+  top: 60px; /* logo abaixo do botão de pausa */
   right: 10px;
-  background: linear-gradient(135deg,#6f42c1,#8e44ad);
+  background: #8b4513; /* mesma cor do pausa */
   color: white;
   border: none;
-  padding: 10px 14px;
+  padding: 9px 10px; /* igual ao pausa */
   border-radius: 10px;
   font-weight: bold;
-  z-index: 1001;
+  font-size: 1rem; /* igual ao pausa */
   cursor: pointer;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  z-index: 1001;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: background 0.3s ease;
+  width: auto; /* deixa o tamanho igual ao do pausa */
+  text-align: center;
 }
-#botaoChat:hover { transform: translateY(-2px); }
+
+/* brilho igual ao pausa */
+#botaoChat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+}
+
+#botaoChat:hover {
+  background: #4DA3FF; /* mesmo hover do pausa */
+}
+
+#botaoChat:hover::before {
+  animation: brilhoPassando 0.6s ease forwards;
+}
+
 
 /* Reutiliza .modal definition, mas faz painel específico */
 #painelChat { display: none; z-index: 3000; }
