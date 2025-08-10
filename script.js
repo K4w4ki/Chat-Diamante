@@ -1212,3 +1212,4 @@ atualizarDatalist();
 
 window.addEventListener('scroll', revelarEmojisScroll);
 window.addEventListener('load', revelarEmojisScroll); // já revela os primeiros ao carregar
+
