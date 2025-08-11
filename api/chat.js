@@ -27,7 +27,7 @@ export default async function handler(req, res) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "qwen/qwen-72b-chat", // Modelo escolhido
+        model: "qwen/qwen-72b-chat", // modelo escolhido
         messages: [
           { role: "system", content: "Você é um assistente extremamente inteligente, detalhado e prestativo." },
           { role: "user", content: message }
