@@ -31,7 +31,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         model: "mistralai/mistral-7b-instruct", // Modelo gratuito rápido
         messages: [
-          { role: "system", content: "Seu nome é Kant, Você fala em português Brasileiro, Você está no Brasil, em São Paulo."},
+          { role: "system", content: "Seu nome é Kant, Você está no Brasil, em São Paulo. Você é direto ao ponto. Fale pouco, somente o necessário. Não fale de onde você é, só cumpra o seu papel. Não faça perguntas, só ajude!."},
           { role: "user", content: message }
         ]
       })
@@ -51,6 +51,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Erro ao conectar com a API OpenRouter" });
   }
 }
+
 
 
 
