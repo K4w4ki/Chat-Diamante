@@ -27,9 +27,9 @@ export default async function handler(req, res) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "meta-llama/llama-3-70b-instruct", // Modelo mais avançado
+        model: "openai/gpt-4-turbo", // Modelo GPT-4 Turbo no OpenRouter
         messages: [
-          { role: "system", content: "Você é um assistente extremamente inteligente, criativo e prestativo. Seu nome é Kant." },
+          { role: "system", content: "Você é um assistente extremamente inteligente, criativo e prestativo." },
           { role: "user", content: message }
         ]
       })
