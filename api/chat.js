@@ -27,9 +27,9 @@ export default async function handler(req, res) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "meta-llama/llama-3-8b-instruct", // Modelo mais inteligente e gratuito
+        model: "meta-llama/llama-3-70b-instruct", // Modelo mais avançado
         messages: [
-          { role: "system", content: "Você é um assistente amigável e prestativo." },
+          { role: "system", content: "Você é um assistente extremamente inteligente, criativo e prestativo. Seu nome é Kant." },
           { role: "user", content: message }
         ]
       })
