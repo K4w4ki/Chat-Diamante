@@ -1,10 +1,10 @@
 export default async function handler(req, res) {
-  // Configurar CORS
-  res.setHeader("Access-Control-Allow-Origin", "*"); // ou o domínio específico
+  // Configura CORS
+  res.setHeader("Access-Control-Allow-Origin", "*"); // ou seu domínio específico
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
-  // Responder rápido ao preflight OPTIONS
+  // Responde o preflight
   if (req.method === "OPTIONS") {
     return res.status(200).end();
   }
@@ -17,6 +17,12 @@ export default async function handler(req, res) {
 
   if (!message) {
     return res.status(400).json({ error: "Mensagem não fornecida" });
+  }
+
+  // Checa se a chave existe
+  if (!process.env.DEEPSEEK_API_KEY) {
+    console.error("ERRO: DEEPSEEK_API_KEY não configurada nas variáveis de ambiente");
+    return res.status(500).json({ error: "Chave da API não configurada" });
   }
 
   try {
@@ -37,12 +43,24 @@ export default async function handler(req, res) {
 
     const data = await response.json();
 
+    // Log para debug
+    console.log("Status DeepSeek:", response.status);
+    console.log("Resposta DeepSeek:", JSON.stringify(data, null, 2));
+
+    // Se a API deu erro
+    if (!response.ok) {
+      return res.status(response.status).json({
+        error: data.error?.message || "Erro na API DeepSeek"
+      });
+    }
+
+    const reply = data.choices?.[0]?.message?.content?.trim();
     res.status(200).json({
-      reply: data.choices?.[0]?.message?.content || "Sem resposta."
+      reply: reply || "Sem resposta."
     });
 
   } catch (error) {
-    console.error(error);
+    console.error("Erro no servidor:", error);
     res.status(500).json({ error: "Erro ao conectar com a IA" });
   }
 }
