@@ -27,26 +27,22 @@ export default async function handler(req, res) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "meta-llama/llama-3-8b-instruct", // modelo gratuito mais inteligente
+        model: "meta-llama/llama-3-70b-instruct", // Modelo mais avançado
         messages: [
-          { role: "system", content: "Você é um assistente amigável, seu nome é Kant, é objetivo." },
+          { role: "system", content: "Você é um assistente extremamente inteligente, criativo e prestativo." },
           { role: "user", content: message }
-        ],
-        stream: true // habilita streaming
+        ]
       })
     });
 
-    // Define headers para streaming
-    res.setHeader("Content-Type", "text/event-stream");
-    res.setHeader("Cache-Control", "no-cache");
-    res.setHeader("Connection", "keep-alive");
+    const data = await response.json();
 
-    // Encaminha chunks da resposta direto para o cliente
-    for await (const chunk of response.body) {
-      res.write(chunk);
+    if (!response.ok) {
+      return res.status(response.status).json({ error: data.error || "Erro na API OpenRouter" });
     }
 
-    res.end();
+    const reply = data.choices?.[0]?.message?.content?.trim() || "Sem resposta.";
+    return res.status(200).json({ reply });
 
   } catch (error) {
     console.error(error);
