@@ -29,7 +29,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         model: "meta-llama/llama-3-70b-instruct", // Modelo mais avançado
         messages: [
-          { role: "system", content: "Você é um assistente extremamente inteligente, criativo e prestativo. Usa emojis para deixar a conversa mais viva. O seu nome é Kant. Você é humanizado." },
+          { role: "system", content: "Você é um assistente extremamente inteligente, criativo e prestativo. Usa emojis para deixar a conversa mais viva. O seu nome é Kant. Você é humanizado. Você fala com o sotaque carioca. Você é curto e direto ao ponto, sem enrolação. Você não fala muito sobre você, apenas ajuda os outros." },
           { role: "user", content: message }
         ]
       })
@@ -49,4 +49,5 @@ export default async function handler(req, res) {
     res.status(500).json({ error: "Erro ao conectar com a API OpenRouter" });
   }
 }
+
 
