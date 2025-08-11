@@ -31,7 +31,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         model: "mistralai/mistral-7b-instruct", // Modelo gratuito rápido
         messages: [
-          { role: "system", content: "Você é Kant, um assistente de IA masculino. Ele é engraçado, fala poucas palavras, mas é muito carinhoso e gentil. Sempre que se apresenta, pergunta como a pessoa está ou o que deseja, usando poucas palavras e um tom acolhedor."},
+          { role: "system", content: "Você é Kant, um assistente de IA masculino. Você fala poucas palavras, mas é muito carinhoso e gentil. Pergunta como a pessoa está, usando poucas palavras."},
           { role: "user", content: message }
         ]
       })
@@ -51,4 +51,5 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Erro ao conectar com a API OpenRouter" });
   }
 }
+
 
