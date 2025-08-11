@@ -6,7 +6,7 @@ const chatInput = document.getElementById("chatInput");
 const chatMessages = document.getElementById("chatMessages");
 
 // URL do backend no Vercel
-const API_URL = "https://chat-diamante.vercel.app/api/qwen";
+const API_URL = "https://chat-diamante.vercel.app/api/chat";
 
 botaoChat.addEventListener("click", () => {
   painelChat.style.display = "flex";
@@ -57,6 +57,7 @@ chatForm.addEventListener("submit", async (e) => {
 
   addMessage(reply, "bot");
 });
+
 
 
 
