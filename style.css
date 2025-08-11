@@ -1071,6 +1071,34 @@ button.create-btn:hover {
   cursor:pointer;
 }
 
+.user-message {
+  background: #d4f1f4;
+  padding: 10px 14px;
+  border-radius: 12px;
+  margin: 8px 0;
+  align-self: flex-end;
+  max-width: 80%;
+}
+
+.bot-message {
+  background: #fef3c7;
+  padding: 10px 14px;
+  border-radius: 12px;
+  margin: 8px 0;
+  align-self: flex-start;
+  max-width: 80%;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+  height: 300px;
+  padding: 10px;
+}
+
+
 /* scrollbar nice */
 .chat-messages::-webkit-scrollbar { width:10px; }
 .chat-messages::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.08); border-radius:8px; }
