@@ -1082,7 +1082,7 @@ button.create-btn:hover {
 .chat-form button {
   padding: 10px 14px;
   border-radius: 12px;
-  background: linear-gradient(135deg,#4b6cb7,#182848);
+  background: linear-gradient(135deg, #4b6cb7, #d2691e, #182848);
   color: white;
   border:none;
   font-weight:700;
