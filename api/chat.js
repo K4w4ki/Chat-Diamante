@@ -27,22 +27,26 @@ export default async function handler(req, res) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "qwen/qwen-72b-chat", // modelo escolhido
+        model: "meta-llama/llama-3-8b-instruct", // modelo gratuito mais inteligente
         messages: [
-          { role: "system", content: "Você é um assistente extremamente inteligente, detalhado e prestativo." },
+          { role: "system", content: "Você é um assistente amigável, seu nome é Kant, é objetivo." },
           { role: "user", content: message }
-        ]
+        ],
+        stream: true // habilita streaming
       })
     });
 
-    const data = await response.json();
+    // Define headers para streaming
+    res.setHeader("Content-Type", "text/event-stream");
+    res.setHeader("Cache-Control", "no-cache");
+    res.setHeader("Connection", "keep-alive");
 
-    if (!response.ok) {
-      return res.status(response.status).json({ error: data.error || "Erro na API OpenRouter" });
+    // Encaminha chunks da resposta direto para o cliente
+    for await (const chunk of response.body) {
+      res.write(chunk);
     }
 
-    const reply = data.choices?.[0]?.message?.content?.trim() || "Sem resposta.";
-    return res.status(200).json({ reply });
+    res.end();
 
   } catch (error) {
     console.error(error);
