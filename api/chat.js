@@ -1,4 +1,14 @@
 export default async function handler(req, res) {
+  // Configurar CORS
+  res.setHeader("Access-Control-Allow-Origin", "*"); // ou o domínio específico
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+
+  // Responder rápido ao preflight OPTIONS
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Método não permitido" });
   }
