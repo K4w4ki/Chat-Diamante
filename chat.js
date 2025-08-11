@@ -1,124 +1,59 @@
-// chat.js - Frontend chat UI + integração com /api/chat
-(() => {
-  const botaoChat = document.getElementById("botaoChat");
-  const painel = document.getElementById("painelChat");
-  const fechar = document.getElementById("fecharChat");
-  const form = document.getElementById("chatForm");
-  const input = document.getElementById("chatInput");
-  const messagesArea = document.getElementById("chatMessages");
-  const sendBtn = document.getElementById("sendBtn");
+const botaoChat = document.getElementById("botaoChat");
+const painelChat = document.getElementById("painelChat");
+const fecharChat = document.getElementById("fecharChat");
+const chatForm = document.getElementById("chatForm");
+const chatInput = document.getElementById("chatInput");
+const chatMessages = document.getElementById("chatMessages");
 
-  const STORAGE_KEY = "chat_diamante_session_v1";
+// URL do backend no Vercel
+const API_URL = "https://chatbot-diamante.vercel.app/api/chat";
 
-  // Carrega histórico da sessão
-  let session = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
-  if (!session) {
-    session = {
-      createdAt: Date.now(),
-      messages: [
-        { role: "system", content: "Você é o assistente da Equipe Girassol. Seja cordial e objetivo." }
-      ]
-    };
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(session));
-  }
+botaoChat.addEventListener("click", () => {
+  painelChat.style.display = "flex";
+});
 
-  function saveSession() {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(session));
-  }
+fecharChat.addEventListener("click", () => {
+  painelChat.style.display = "none";
+});
 
-  function renderMessages() {
-    messagesArea.innerHTML = "";
-    session.messages.forEach((m, i) => {
-      if (m.role === "system") return; // não mostrar system
-      const div = document.createElement("div");
-      div.className = `bubble ${m.role === "user" ? "user" : "bot"}`;
-      div.textContent = m.content;
-      messagesArea.appendChild(div);
+function addMessage(content, sender) {
+  const div = document.createElement("div");
+  div.className = sender === "user" ? "user-message" : "bot-message";
+  div.textContent = content;
+  chatMessages.appendChild(div);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+async function sendMessage(message) {
+  try {
+    const res = await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message })
     });
-    messagesArea.scrollTop = messagesArea.scrollHeight;
+
+    const data = await res.json();
+    return data.reply || "Erro na resposta.";
+  } catch {
+    return "Erro ao se conectar ao servidor.";
+  }
+}
+
+chatForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const message = chatInput.value.trim();
+  if (!message) return;
+
+  addMessage(message, "user");
+  chatInput.value = "";
+  addMessage("Digitando...", "bot");
+
+  const reply = await sendMessage(message);
+
+  const typingMsg = chatMessages.querySelector(".bot-message:last-child");
+  if (typingMsg && typingMsg.textContent === "Digitando...") {
+    typingMsg.remove();
   }
 
-  function addLocalMessage(role, content) {
-    session.messages.push({ role, content });
-    saveSession();
-    renderMessages();
-  }
-
-  function showTyping() {
-    const el = document.createElement("div");
-    el.className = "bubble bot typing";
-    el.id = "typingIndicator";
-    el.innerHTML = `<div class="typing"><span></span><span></span><span></span></div>`;
-    messagesArea.appendChild(el);
-    messagesArea.scrollTop = messagesArea.scrollHeight;
-  }
-
-  function removeTyping() {
-    const t = document.getElementById("typingIndicator");
-    if (t) t.remove();
-  }
-
-  // abrir/fechar
-  botaoChat.addEventListener("click", () => { painel.style.display = "flex"; renderMessages(); input.focus(); });
-  fechar.addEventListener("click", () => { painel.style.display = "none"; });
-
-  // submit
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const text = input.value.trim();
-    if (!text) return;
-    // limita tamanho do input para evitar abuso:
-    if (text.length > 2000) {
-      alert("Mensagem muito longa (máx 2000 caracteres).");
-      return;
-    }
-
-    // mostra mensagem do usuário
-    addLocalMessage("user", text);
-    input.value = "";
-    input.disabled = true;
-    sendBtn.disabled = true;
-
-    // mostra typing
-    showTyping();
-
-    try {
-      // envia para backend
-      const payload = { messages: session.messages.slice(-30) }; // envia últimos 30 msgs
-      const r = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-
-      if (!r.ok) {
-        throw new Error(`Erro ${r.status}`);
-      }
-
-      const data = await r.json();
-      // espera estrutura: { reply: "texto do bot" } (veja backend)
-      const reply = data.reply ?? (data.choices && data.choices[0]?.message?.content) ?? "Desculpe, sem resposta.";
-
-      removeTyping();
-      addLocalMessage("assistant", reply);
-
-    } catch (err) {
-      removeTyping();
-      addLocalMessage("assistant", "Desculpe — não foi possível conectar ao servidor. Tente novamente mais tarde.");
-      console.error("chat error:", err);
-    } finally {
-      input.disabled = false;
-      sendBtn.disabled = false;
-      input.focus();
-    }
-  });
-
-  // render inicial
-  renderMessages();
-
-  // atalho: Esc fecha
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") painel.style.display = "none";
-  });
-
-})();
+  addMessage(reply, "bot");
+});
