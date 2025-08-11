@@ -1,12 +1,10 @@
 export default async function handler(req, res) {
-  // Configurar CORS
+  // Configura CORS
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
-  if (req.method === "OPTIONS") {
-    return res.status(200).end();
-  }
+  if (req.method === "OPTIONS") return res.status(200).end();
 
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Método não permitido" });
@@ -29,9 +27,9 @@ export default async function handler(req, res) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "mistralai/mistral-7b-instruct", // Modelo gratuito rápido
+        model: "meta-llama/llama-3-8b-instruct", // Modelo mais inteligente e gratuito
         messages: [
-          { role: "system", content: "Seu nome é Kant, Você está no Brasil, em São Paulo. Você é direto ao ponto. Fale pouco, somente o necessário. Não fale de onde você é, só cumpra o seu papel. Não faça perguntas, só ajude!."},
+          { role: "system", content: "Você é um assistente amigável e prestativo." },
           { role: "user", content: message }
         ]
       })
@@ -48,12 +46,6 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ error: "Erro ao conectar com a API OpenRouter" });
+    res.status(500).json({ error: "Erro ao conectar com a API OpenRouter" });
   }
 }
-
-
-
-
-
-
