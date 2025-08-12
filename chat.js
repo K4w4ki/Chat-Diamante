@@ -8,6 +8,13 @@ const chatMessages = document.getElementById("chatMessages");
 // URL do backend no Vercel
 const API_URL = "https://chat-diamante.vercel.app/api/chat";
 
+// Cria ou recupera um sessionId
+let sessionId = localStorage.getItem("sessionId");
+if (!sessionId) {
+  sessionId = crypto.randomUUID();
+  localStorage.setItem("sessionId", sessionId);
+}
+
 botaoChat.addEventListener("click", () => {
   painelChat.style.display = "flex";
 });
@@ -22,7 +29,7 @@ function addMessage(content, sender) {
 
   const avatar = document.createElement("div");
   avatar.className = "avatar";
-  avatar.textContent = sender === "user" ? "👩🏽‍🌾" : "🤠"; // pode ser emoji ou imagem
+  avatar.textContent = sender === "user" ? "👩🏽‍🌾" : "🤠";
 
   const bubble = document.createElement("div");
   bubble.className = sender === "user" ? "user-message" : "bot-message";
@@ -54,7 +61,7 @@ async function sendMessage(message) {
     const res = await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message })
+      body: JSON.stringify({ message, sessionId }) // ENVIA sessionId
     });
 
     const data = await res.json();
@@ -80,13 +87,13 @@ chatForm.addEventListener("submit", async (e) => {
     typingMsg.remove();
   }
 
-   typeMessage(reply, "bot", 20); // 20 milissegundos por caractere
+  typeMessage(reply, "bot", 20);
+});
 
+// Enter para enviar (Shift+Enter = nova linha)
 chatInput.addEventListener("keydown", function (e) {
   if (e.key === "Enter" && !e.shiftKey) {
-    e.preventDefault(); // impede quebra de linha
+    e.preventDefault();
     chatForm.dispatchEvent(new Event("submit", { cancelable: true }));
   }
-});
- 
 });
