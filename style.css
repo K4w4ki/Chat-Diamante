@@ -983,18 +983,18 @@ button.create-btn:hover {
 /* Reutiliza .modal definition, mas faz painel específico */
 #painelChat { display: none; z-index: 3000; }
 .chat-panel {
-  width: clamp(320px, 95%, 420px);
-  max-height: 80vh;
+  width: clamp (720px, 95%, 960px);
+  max-height: 95vh;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 18px;
   padding: 0;
 }
 
 /* Header */
 .chat-header {
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   justify-content:space-between;
   padding: 12px 16px;
   background: linear-gradient(90deg,#ffd97a,#ffd36b);
@@ -1006,13 +1006,12 @@ button.create-btn:hover {
 
 /* Messages area */
 .chat-messages {
-  padding: 12px;
-  overflow-y: auto;
+  padding: 22px;
   background: linear-gradient(180deg,#fffef6,#fff8ea);
   border-bottom: 1px solid rgba(0,0,0,0.04);
-  display:flex;
+  display: absolute;
   flex-direction:column;
-  gap:8px;
+  gap: 8px;
 }
 .bubble {
   max-width: 82%;
@@ -1066,7 +1065,7 @@ button.create-btn:hover {
 /* Form */
 .chat-form {
   display:flex;
-  gap:8px;
+  gap: 5px;
   padding: 12px;
   background: linear-gradient(180deg,#fffaf0,#fff3e0);
   border-bottom-left-radius: 20px;
@@ -1081,8 +1080,8 @@ button.create-btn:hover {
 }
 .chat-form button {
   padding: 10px 14px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #4b6cb7, #d2691e);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ff8c00, #ff4500);
   color: white;
   border:none;
   font-weight:700;
@@ -1093,7 +1092,7 @@ button.create-btn:hover {
 .user-message {
   align-self: flex-end;
   max-width: 75%;
-  background: linear-gradient(135deg, #c2e9ff, #a1dfff);
+  background: linear-gradient(135deg, #d4fcd4, #a8e6a1);
   color: #1a1a1a;
   padding: 10px 14px;
   border-radius: 14px 14px 4px 14px;
@@ -1107,7 +1106,7 @@ button.create-btn:hover {
 .bot-message {
   align-self: flex-start;
   max-width: 75%;
-  background: linear-gradient(135deg, #ffffff, #f6f9fc);
+  background: linear-gradient(135deg, #ffe0b2, #ffcc80);
   color: #1a1a1a;
   padding: 10px 14px;
   border-radius: 14px 14px 14px 4px;
@@ -1135,6 +1134,48 @@ button.create-btn:hover {
   height: 300px;
   padding: 30px;
 }
+
+.message-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.message-row.user {
+  flex-direction: row-reverse; /* usuário à direita */
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chat-form textarea {
+  flex: 1;
+  padding: 8px;
+  border-radius: 15px;
+  border: 2px solid #e9e2d6;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: none; /* impede arrastar manualmente */
+  min-height: 40px; /* altura padrão do input */
+  max-height: 120px; /* não crescer demais */
+  overflow-y: auto;
+}
+
 
 /* scrollbar nice */
 .chat-messages::-webkit-scrollbar { width:10px; }
