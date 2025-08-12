@@ -17,11 +17,36 @@ fecharChat.addEventListener("click", () => {
 });
 
 function addMessage(content, sender) {
+  const wrapper = document.createElement("div");
+  wrapper.className = sender === "user" ? "message-row user" : "message-row bot";
+
+  const avatar = document.createElement("div");
+  avatar.className = "avatar";
+  avatar.textContent = sender === "user" ? "👩🏽‍🌾" : "🤠"; // pode ser emoji ou imagem
+
+  const bubble = document.createElement("div");
+  bubble.className = sender === "user" ? "user-message" : "bot-message";
+  bubble.textContent = content;
+
+  wrapper.appendChild(avatar);
+  wrapper.appendChild(bubble);
+  chatMessages.appendChild(wrapper);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function typeMessage(content, sender, speed = 25) {
   const div = document.createElement("div");
   div.className = sender === "user" ? "user-message" : "bot-message";
-  div.textContent = content;
   chatMessages.appendChild(div);
   chatMessages.scrollTop = chatMessages.scrollHeight;
+
+  let i = 0;
+  const interval = setInterval(() => {
+    div.textContent += content.charAt(i);
+    i++;
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    if (i >= content.length) clearInterval(interval);
+  }, speed);
 }
 
 async function sendMessage(message) {
@@ -55,10 +80,13 @@ chatForm.addEventListener("submit", async (e) => {
     typingMsg.remove();
   }
 
-  addMessage(reply, "bot");
+   typeMessage(reply, "bot", 20); // 20 milissegundos por caractere
+
+chatInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault(); // impede quebra de linha
+    chatForm.dispatchEvent(new Event("submit", { cancelable: true }));
+  }
 });
-
-
-
-
-
+ 
+});
