@@ -34,6 +34,24 @@ function addMessage(content, sender) {
   const bubble = document.createElement("div");
   bubble.className = sender === "user" ? "user-message" : "bot-message";
   bubble.textContent = content;
+// Adiciona botões de copiar para cada bloco de código
+bubble.querySelectorAll('pre').forEach((block) => {
+  const copyBtn = document.createElement('button');
+  copyBtn.textContent = '📋 Copiar';
+  copyBtn.className = 'copy-code-btn';
+
+  copyBtn.addEventListener('click', () => {
+    const codeText = block.innerText;
+    navigator.clipboard.writeText(codeText).then(() => {
+      copyBtn.textContent = '✅ Copiado!';
+      setTimeout(() => copyBtn.textContent = '📋 Copiar', 1500);
+    });
+  });
+
+  block.style.position = 'relative';
+  block.appendChild(copyBtn);
+});
+
 
   wrapper.appendChild(avatar);
   wrapper.appendChild(bubble);
@@ -41,20 +59,81 @@ function addMessage(content, sender) {
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-function typeMessage(content, sender, speed = 25) {
-  const div = document.createElement("div");
-  div.className = sender === "user" ? "user-message" : "bot-message";
-  chatMessages.appendChild(div);
-  chatMessages.scrollTop = chatMessages.scrollHeight;
+function showTypingIndicator() {
+  const typingDiv = document.createElement("div");
+  typingDiv.className = "typing";
 
-  let i = 0;
-  const interval = setInterval(() => {
-    div.textContent += content.charAt(i);
-    i++;
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-    if (i >= content.length) clearInterval(interval);
-  }, speed);
+  for (let i = 0; i < 3; i++) {
+    const dot = document.createElement("span");
+    typingDiv.appendChild(dot);
+  }
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "message-row bot";
+
+  const avatar = document.createElement("div");
+  avatar.className = "avatar";
+  avatar.textContent = "🤠"; // ícone do bot
+
+  wrapper.appendChild(avatar);
+  wrapper.appendChild(typingDiv);
+  chatMessages.appendChild(wrapper);
+
+  // Scroll suave até o final
+  chatMessages.scrollTo({ top: chatMessages.scrollHeight, behavior: "smooth" });
 }
+
+
+
+function typeMessage(content, sender, speed = 25) {
+  const wrapper = document.createElement("div");
+  wrapper.className = sender === "user" ? "message-row user" : "message-row bot";
+
+  const avatar = document.createElement("div");
+  avatar.className = "avatar";
+  avatar.textContent = sender === "user" ? "👩🏽‍🌾" : "🤠";
+
+  const bubble = document.createElement("div");
+  bubble.className = sender === "user" ? "user-message" : "bot-message";
+  wrapper.appendChild(avatar);
+  wrapper.appendChild(bubble);
+  chatMessages.appendChild(wrapper);
+  chatMessages.scrollTo({ top: chatMessages.scrollHeight, behavior: "smooth" });
+
+  if (sender === "bot") {
+    let i = 0;
+    const interval = setInterval(() => {
+      bubble.textContent = content.slice(0, i + 1); // texto puro enquanto digita
+      i++;
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      if (i >= content.length) {
+        clearInterval(interval);
+        bubble.innerHTML = marked.parse(content); // renderiza markdown no fim
+// Adiciona botões de copiar para cada bloco de código
+bubble.querySelectorAll('pre').forEach((block) => {
+  const copyBtn = document.createElement('button');
+  copyBtn.textContent = '📋 Copiar';
+  copyBtn.className = 'copy-code-btn';
+
+  copyBtn.addEventListener('click', () => {
+    const codeText = block.innerText;
+    navigator.clipboard.writeText(codeText).then(() => {
+      copyBtn.textContent = '✅ Copiado!';
+      setTimeout(() => copyBtn.textContent = '📋 Copiar', 1500);
+    });
+  });
+
+  block.style.position = 'relative';
+  block.appendChild(copyBtn);
+});
+
+      }
+    }, speed);
+  } else {
+    bubble.textContent = content;
+  }
+}
+
 
 async function sendMessage(message) {
   try {
@@ -78,16 +157,16 @@ chatForm.addEventListener("submit", async (e) => {
 
   addMessage(message, "user");
   chatInput.value = "";
-  addMessage("Digitando...", "bot");
+  showTypingIndicator();
 
-  const reply = await sendMessage(message);
+const reply = await sendMessage(message);
 
-  const typingMsg = chatMessages.querySelector(".bot-message:last-child");
-  if (typingMsg && typingMsg.textContent === "Digitando...") {
-    typingMsg.remove();
-  }
+// Remove o indicador de digitação
+const typingIndicator = chatMessages.querySelector(".typing");
+if (typingIndicator) typingIndicator.parentElement.remove();
 
-  typeMessage(reply, "bot", 20);
+typeMessage(reply, "bot", 20);
+
 });
 
 // Enter para enviar (Shift+Enter = nova linha)
