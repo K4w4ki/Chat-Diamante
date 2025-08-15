@@ -284,8 +284,7 @@ número: 0800 –762- 8872 com a nossa central. Funcionamos de segunda à sexta 
 
  {
     title: "Bloqueio 4 - Restrição de acesso por política interna.",
-    content: `
-Após a análise, identificamos que o cadastro foi bloqueado em função de critérios internos estabelecidos pela empresa. 
+    content: `Após a análise, identificamos que o cadastro foi bloqueado em função de critérios internos estabelecidos pela empresa. 
 Sabemos que isso pode gerar dúvidas e desconforto, mas, neste caso, o sistema não permite a continuidade do processo nem a reversão do bloqueio.
 Agradecemos pela compreensão e seguimos à disposição para ajudar no que for possível com outras informações ou necessidades.`
   },
