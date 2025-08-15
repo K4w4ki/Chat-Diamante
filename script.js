@@ -128,6 +128,7 @@ Código unitário do produto e quantidade: `
   {
     title: "CHECKLIST PARA FALTA - PRODUTO FATURADO",
     content: `Informações para implementar na tabulação.
+	
 * Número do pedido:
 * Item(s) faltante(s) (Nome do produto + Código):
 * Item consta na NF?:
