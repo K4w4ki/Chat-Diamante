@@ -124,6 +124,23 @@ Código unitário do produto e quantidade: `
 
   },
 
+
+  {
+    title: "CHECKLIST PARA FALTA - PRODUTO FATURADO",
+    content: `Informações para implementar na tabulação.
+* Número do pedido:
+* Item(s) faltante(s) (Nome do produto + Código):
+* Item consta na NF?:
+* Quantidade de caixas a ser entregue no pedido: 
+  :Exemplo de sondagem:  seu pedido deveria ter quantos volumes (caixas) no total? E quantos você recebeu?
+
+* Caixas lacradas ou com sinal de violação?: 
+* Item faz parte de kit? Se sim, informar nome do kit e qual item faltou:
+* Recebeu produto a mais? Se sim, informar Código + Nome do produto:
+* Quem realizou a captação do pedido?:`
+  },
+
+	
   {
     title: "Protocolo Aberto",
     content: `A ocorrência foi direcionada para o setor responsável. Número do Protocolo é o xxxxxx com previsão para a conclusão e resposta até o dia xx/xx, o retorno é feito por email. Lembrando que esta é apenas o prazo limite para respostas e a nossa equipe costuma entrar em contato muito antes que o informado! `
