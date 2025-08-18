@@ -38,7 +38,7 @@ O protocolo da ocorrência é XXXXX`
 
   {
     title: "DESCULPA",
-    content: `Peço perdão pelo transtorno, viu? Mas de coração, espero poder ajudar da melhor forma possível!`
+    content: `Peço desculpas em nome da natura pelo transtorno, viu? Mas espero poder ajudar da melhor forma possível!`
   },
 
 
@@ -263,11 +263,11 @@ Já vou te direcionar pra equipe certa, que vai te dar aquela força! 🧡`
     title: "Encerramento",
     content: `O protocolo do seu atendimento é xxxxxxxxxxxxxxx
 
-Eu agradeço a sua atenção e paciência, foi um prazer falar com você hoje!💖🥰
-Lembrando que até amanhã você poderá receber  em seu whatsapp uma pesquisa para avaliar o meu atendimento.
-È importante que responda para o meu Desenvolvimento.
-Lembrando que de 9 á 10 são notas satisfatórias 💖
-Fico aguardando a sua avaliação!`
+Muito obrigada pela sua atenção e paciência! Foi um prazer falar com você hoje! 💖🥰
+Quero lembrar que até amanhã você pode receber no seu WhatsApp uma pesquisa para avaliar o meu atendimento.
+As estrelas ⭐ que você der são muito importantes para o meu desenvolvimento dentro da empresa.
+Avaliações de 4 a 5 estrelas significam que consegui te atender bem! 💖⭐
+Ficarei aguardando sua avaliação com muito carinho!⭐`
   },
 
 
