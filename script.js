@@ -263,7 +263,7 @@ Já vou te direcionar pra equipe certa, que vai te dar aquela força! 🧡`
     title: "Encerramento",
     content: `O protocolo do seu atendimento é xxxxxxxxxxxxxxx
 
-Muito obrigada pela sua atenção e paciência! Foi um prazer falar com você hoje! 💖🥰
+Eu agradeço pela sua atenção e paciência! Foi um prazer falar com você hoje! 💖🥰
 Quero lembrar que até amanhã você pode receber no seu WhatsApp uma pesquisa para avaliar o meu atendimento.
 As estrelas ⭐ que você der são muito importantes para o meu desenvolvimento dentro da empresa.
 Avaliações de 4 a 5 estrelas significam que consegui te atender bem! 💖⭐
