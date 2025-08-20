@@ -91,7 +91,7 @@ function showTypingIndicator() {
   chatMessages.scrollTo({ top: chatMessages.scrollHeight, behavior: "smooth" });
 }
 
-function typeMessage(content, sender, speed = 25) {
+function typeMessage(content, sender, speed = 300) {
   const wrapper = document.createElement("div");
   wrapper.className = sender === "user" ? "message-row user" : "message-row bot";
 
@@ -101,21 +101,24 @@ function typeMessage(content, sender, speed = 25) {
 
   const bubble = document.createElement("div");
   bubble.className = sender === "user" ? "user-message" : "bot-message";
+
   wrapper.appendChild(avatar);
   wrapper.appendChild(bubble);
   chatMessages.appendChild(wrapper);
   chatMessages.scrollTo({ top: chatMessages.scrollHeight, behavior: "smooth" });
 
   if (sender === "bot") {
+    const words = content.split(/(\s+)/); // Divide mantendo espaços para preservar formatação
     let i = 0;
+
     const interval = setInterval(() => {
-      bubble.textContent = content.slice(0, i + 1); // texto puro enquanto digita
-      i++;
+      const partialText = words.slice(0, i + 1).join('');
+      bubble.innerHTML = marked.parse(partialText);
       chatMessages.scrollTop = chatMessages.scrollHeight;
-      if (i >= content.length) {
+
+      i++;
+      if (i >= words.length) {
         clearInterval(interval);
-        bubble.innerHTML = marked.parse(content);
-        addCopyButtons(bubble);
       }
     }, speed);
   } else {
