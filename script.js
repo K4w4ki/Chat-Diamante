@@ -48,7 +48,6 @@ O protocolo da ocorrência é XXXXX`
 `
   },
 
-
   {
     title: "REDE - Coleta de Dados",
     content: `Nome completo da Cliente:
