@@ -62,7 +62,7 @@ Endereço da Cliente:
 CEP da Cliente:`
   },
   {
-    title: "CAN - Coleta de Dados",
+    title: "CAN - Dano e Defeito",
     content: `Número do pedido:
 Código unitário do produto e quantidade:
 Lote:
@@ -108,7 +108,10 @@ Validade:
 Estado da caixa do pedido: 
 Cheio, vazio ou pela metade: 
 Descrição do defeito:
-Imagem do produto defeituoso.`
+Imagem do produto defeituoso.
+
+Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/447144/acuracidade-manifestacoes-de-qualidade
+`
 
   },
 
@@ -135,7 +138,10 @@ Código unitário do produto e quantidade: `
 * Caixas lacradas ou com sinal de violação?: 
 * Item faz parte de kit? Se sim, informar nome do kit e qual item faltou:
 * Recebeu produto a mais? Se sim, informar Código + Nome do produto:
-* Quem realizou a captação do pedido?:`
+* Quem realizou a captação do pedido?:
+
+Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/322392/pos-compra
+`
   },
 	
   {
@@ -248,9 +254,22 @@ Seu atendimento é do nível Ouro, e tem um setor específico que acompanha esse
 Já vou te direcionar pra equipe certa, que vai te dar aquela força! 🧡`
   },
 
+  {
+    title: "Bloqueios Diversos.",
+    content: `CASOS PARA CONSULTORAS COM QUAISQUER OUTRO TIPO DE BLOQUEIO EM SUA CONTA, SEGUE A WIKI:
 
+Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/443020/bloqueio-e-desbloqueio-de-cadastro
+ `
+  },
 
+  {
+    title: "Emana Pay.",
+    content: `Atendimento Emana Pay - Situações e quando fazer:
+casos para a consultora com problemas no emana pay, segue a wiki:
 
+Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/346278/emana-pay
+ `
+  },
 
   {
     title: "Encerramento",
@@ -330,9 +349,8 @@ Devido à falta de interação no chat o nosso atendimento será encerrado! A Co
 
   {
     title: "Pontuação - Aumento de pontos",
-    content: `Nós não conseguimos aumentar os seus pontos de crédito por aqui! Existem duas formas de aumentar os seus pontos, sendo a primeira realizar o pagamento de títulos que 
-estejam em aberto. A segunda forma seria entrando em contato com a nossa assistente 
-virtual pelo Whatsapp 11 93036-0000 e solicitar a ela um aumento de pontos!`
+    content: `Nós não possuimos autonomia para realizar o aumento dos seus pontos de crédito por aqui! Existem duas formas de aumentar os seus pontos, sendo a primeira opção, realizar o pagamento de títulos que 
+estejam em aberto, e a segunda opção, seria entrando em contato com a nossa assistente virtual pelo Whatsapp 11 93036-0000 e solicitar o aumento de pontos!`
   },
 
   {
@@ -345,7 +363,7 @@ seu pedido. Para resgatar a incorporação basta passar pedidos dentro de até 2
 em que você for passar fo pedido, basta clicar em "aceitar" que o produto será adicionado
 na sua caixa completamente isento de custos! Caso você não consiga ou possa passar
 pedidos dentro de 2 ciclos, ou o produto incorporado não esteja disponível no estoque, os
-produtos tornam-se vale pontos que podem ser utilizados para resgatar brindes e outros
+produtos tornam-se vale-pontos que podem ser utilizados para resgatar brindes e outros
 produtos não promocionais.
 Lembrando que uma vez que a solução da incorporação for disponibilizada não há como
 alterá-la. Você aceita esse meio de reparação?`
@@ -386,6 +404,7 @@ XXx de R$xxx,xx
 
 Como prefere prosseguir com a negociação?`
   },
+	
   {
     title: "Crédito - Limite",
     content: `A central não trata limite de crédito.
@@ -466,6 +485,8 @@ Dados a parte para tabulação.
 * Descrever testes realizados com a consultora em linha conforme artigo Suporte: 
 * Acesso via site: descrever qual o tipo de navegador está utilizando e qual a versão
 * Descrição detalhada do erro: 
+
+Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/322563/tecnologia-problemas-sites-e-apps
 `
   },
 
