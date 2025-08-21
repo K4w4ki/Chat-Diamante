@@ -122,7 +122,6 @@ Código unitário do produto e quantidade: `
 
   },
 
-
   {
     title: "CHECKLIST PARA FALTA - PRODUTO FATURADO",
     content: `Informações para implementar na tabulação.
@@ -138,13 +137,11 @@ Código unitário do produto e quantidade: `
 * Recebeu produto a mais? Se sim, informar Código + Nome do produto:
 * Quem realizou a captação do pedido?:`
   },
-
 	
   {
     title: "Protocolo Aberto",
     content: `A ocorrência foi direcionada para o setor responsável. Número do Protocolo é o xxxxxx com previsão para a conclusão e resposta até o dia xx/xx, o retorno é feito por email. Lembrando que esta é apenas o prazo limite para respostas e a nossa equipe costuma entrar em contato muito antes que o informado! `
   },
-
 
   {
     title: "TRANSPORTE - ATRASO",
@@ -170,7 +167,6 @@ recebimento, sendo assim, eu apenas irei deixar registrado a
 informação. `
   },
 
-
   {
     title: "VALE-PONTOS",
     content: ` **  Produto virou vale pontos  ** 
@@ -179,14 +175,12 @@ Eu verifiquei no sistema, e consta que o seu produto foi
 convertido em vale pontos para que você possa resgatar um 
 outro produto.
 
-
 **  Enviar para o N2 – Não virou vale pontos.  **
 
 Como já passou o prazo de dois ciclos e o produto não foi 
 convertido em vale pontos, irei registrar uma ocorrência para 
 que a área interna da natura faça uma análise.`
   },
-
 
   {
     title: "CANCELAMENTO DE PEDIDO",
@@ -1238,7 +1232,5 @@ searchInput.addEventListener("keydown", (e) => {
 
 atualizarDatalist();
 
-
 window.addEventListener('scroll', revelarEmojisScroll);
 window.addEventListener('load', revelarEmojisScroll); // já revela os primeiros ao carregar
-
