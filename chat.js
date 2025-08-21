@@ -49,7 +49,7 @@ function addMessage(content, sender) {
 
   const avatar = document.createElement("div");
   avatar.className = "avatar";
-  avatar.textContent = sender === "user" ? "👩🏽‍🌾" : "🤠";
+  avatar.textContent = sender === "user" ? "👩🏽‍🌾" : "🌻";
 
   const bubble = document.createElement("div");
   bubble.className = sender === "user" ? "user-message" : "bot-message";
@@ -81,7 +81,7 @@ function showTypingIndicator() {
 
   const avatar = document.createElement("div");
   avatar.className = "avatar";
-  avatar.textContent = "🤠"; // ícone do bot
+  avatar.textContent = "🌻"; // ícone do bot
 
   wrapper.appendChild(avatar);
   wrapper.appendChild(typingDiv);
@@ -97,7 +97,7 @@ function typeMessage(content, sender, speed = 300) {
 
   const avatar = document.createElement("div");
   avatar.className = "avatar";
-  avatar.textContent = sender === "user" ? "👩🏽‍🌾" : "🤠";
+  avatar.textContent = sender === "user" ? "👩🏽‍🌾" : "🌻";
 
   const bubble = document.createElement("div");
   bubble.className = sender === "user" ? "user-message" : "bot-message";
@@ -166,3 +166,4 @@ chatInput.addEventListener("keydown", function (e) {
     chatForm.dispatchEvent(new Event("submit", { cancelable: true }));
   }
 });
+
