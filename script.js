@@ -289,15 +289,6 @@ Agradecemos a compreensão e nos colocamos à disposição para eventuais dúvid
   },	
 	
   {
-    title: "Bloqueio 5 - Política interna.",
-    content: `Agradecemos seu interesse em desempenhar as atividades de Consultoria Natura. 
-Informamos que foi realizada uma análise interna no cadastro e de acordo com as 
-políticas atuais da empresa, não foi possível a sua aprovação e infelizmente, o cadastro 
-não é passível de reanálise para desbloqueio.`
-  },
-
-
-  {
     title: "Bloqueio 19",
     content: `Seu cadastro foi bloqueado por títulos cedidos para as nossas empresas parceiras. 
 Quando um título fica muito tempo vencido no sistema, a Natura&Co realiza a venda dos 
@@ -306,7 +297,6 @@ mesmos, nossa principal parceira é a Recovery que você poderá contatar pelo t
 deverá solicitar a carta de quitação de títulos e nos enviar por aqui ou pelo e-mail 
 natconsultora@natura.net.`
   },
-
 
   {
     title: "Bloqueio 7",
