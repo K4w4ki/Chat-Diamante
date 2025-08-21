@@ -418,6 +418,35 @@ Protocolo xxxxxx.`
 
 
   {
+    title: "Squid - Atendimento N1 – Prestar informações",
+    content: `deve orientar a CB Treinadora que realize abertura de chamado dentro da plataforma de treinamentos Squid nos casos abaixo:
+
+1 - Problemas de agendamento e reagendamento;
+2 - Problemas Técnicos com plataforma de transmissão;
+3 - Problema com o cálculo de pagamento ou regras de cálculo;
+4 - Dificuldades de subir NF;
+5 - E dúvidas e/ou questionamentos a respeito dos Relatórios automatizados de treinamentos realizados e/ou avaliação de treinamentos deverão ser encaminhadas para os canais de atendimento da Squid.
+
+* Whatsapp para contato com a Squid: +55 (11) 94897-2729
+* E-mail: meajuda.natura@squidit.com.br
+
+Tabulação N1:
+
+1 - Categorizar:
+
+ * Primeira Categoria: Apoio a Atividade
+ * Segunda Categoria: Recursos de apoio
+ * Motivo: Treinamento
+
+2 - Detalhar (OBRIGATÓRIAMENTE) no campo descrição as informações prestadas e o motivo do contato.​​
+3 - Selecionar a solução manual N1: Informação;
+4 - Clique em salvar ocorrência. (finalizadora da ocorrência) 
+
+Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/403201/consultora-de-beleza-treinadora
+`
+},
+	
+  {
     title: "Tecnologia - B.O no Aplicativo",
     content: `Para que possamos prosseguir com a solicitação, peço que me encaminhe os seguintes dados, por gentileza.
 
