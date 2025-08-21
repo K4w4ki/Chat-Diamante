@@ -289,6 +289,11 @@ Agradecemos pela compreensão e seguimos à disposição para ajudar no que for 
 `
   },
 
+  {
+    title: "Bloqueio 5 - Cadastro com Fraude confirmada",
+    content: `Agradecemos seu interesse em atuar como Consultor(a) Natura. Informamos que realizamos uma análise interna do seu cadastro e, conforme as políticas vigentes da empresa, no momento não foi possível efetivar sua ativação. Ressaltamos que, de acordo com essas diretrizes, este processo não está elegível para reanálise ou desbloqueio.
+Agradecemos a compreensão e nos colocamos à disposição para eventuais dúvidas.`
+  },	
 	
   {
     title: "Bloqueio 5 - Política interna.",
