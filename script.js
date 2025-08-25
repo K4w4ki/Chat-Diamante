@@ -24,16 +24,15 @@ Me informa o seu e-mail e o seu telefone e o melhor horário para contato.`
 
   {
     title: "PROTOCOLO - REGISTRO",
-    content: `* Modelo ∙ N2
+    content: `• Modelo ∙ N2
 
-Encaminhei a ocorrência de XXXXXX para a área interna da Natura e 
-tem até o dia XXXX para a área interna analisar e finalizar a 
-tratativa. Lembrando que as demais informações, chegara para 
-você por e-mail, é só você aguardar e acompanhar por lá. 
-OBS: Caso aconteça de você não ter recebido as informações por email até o prazo que eu informei, você pode retornar um dia depois 
-com o protocolo para que possamos verificar e te passar as 
-informações. 
-O protocolo da ocorrência é XXXXX`
+Encaminhei a ocorrência de XXXXXX para a área interna da Natura. Eles têm até o dia XXXX para analisar e finalizar a tratativa. ⏳✅
+
+Lembre-se que as demais informações chegarão para você por e-mail. É só aguardar e acompanhar por lá. 📧👀
+
+OBS: Caso não receba as informações por e-mail até o prazo informado, você pode retornar um dia depois com o protocolo para que possamos verificar e te atualizar. 🔄📞
+
+O protocolo da ocorrência é XXXXX. 🆔`
   },
 
   {
@@ -61,17 +60,7 @@ Telefone da Cliente:
 Endereço da Cliente:
 CEP da Cliente:`
   },
-  {
-    title: "CAN - Dano e Defeito",
-    content: `Número do pedido:
-Código unitário do produto e quantidade:
-Lote:
-Validade:
-Cheio, vazio ou pela metade:
-Descrição do defeito:
-Email:
-Telefone:`
-  },
+
   {
     title: "Recalculo / Promoção Não Aplicada",
     content: ` **  Promoção não aplicada  **
@@ -120,8 +109,11 @@ Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/447144/acuracidade-ma
     content: 
 `Para que consigamos abrir uma solicitação referente a falta do produto, peço que me informe alguns dados que estarei solicitando em seguida:
 
-Número do pedido: 	
-Código unitário do produto e quantidade: `
+* Número do pedido: 	
+* Código unitário do produto e quantidade:
+
+Consegue me informar esses dados?
+`
 
   },
 
@@ -153,75 +145,60 @@ Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/322392/pos-compra
     title: "TRANSPORTE - ATRASO",
     content: `**  Analise – Solicitar pedido  **
 
-Compreendo, irei analisar em sistema, poderia me informar o 
-número do pedido para que eu possa analisar? 
+• Análise – Solicitar pedido 🔍
 
-**  Um momento – Analise  **
-Obrigado, por gentileza, peço que aguarde um momento, irei verificar. 
-😊🕒
+Compreendo, irei analisar em sistema. Poderia me informar o número do pedido para que eu possa verificar? 📝
 
-**  Informar que será registrado  **
+• Um momento – Análise ⏳
 
-Peço desculpas por esse transtorno que foi causado a você, eu irei 
-registrar uma ocorrência de atraso na entrega, para que a área 
-interna faça uma análise e te retorne uma posição pelo seu E-mail.
+Obrigado! Por gentileza, peço que aguarde um momento enquanto verifico. 😊🕒
 
-**  Retorno pois está no prazo  **
+• Informar que será registrado 🛠️
 
-Verifiquei em sistema, consta que o pedido está no prazo para 
-recebimento, sendo assim, eu apenas irei deixar registrado a 
-informação. `
+Peço desculpas pelo transtorno causado. Registrarei uma ocorrência sobre o atraso na entrega para que a área responsável faça a análise e retorne uma posição pelo seu e-mail. 📧
+
+• Retorno – Pedido dentro do prazo ✅
+
+Verifiquei no sistema e o pedido está dentro do prazo para recebimento. Sendo assim, apenas deixarei essa informação registrada. ✔️
+`
   },
 
   {
     title: "VALE-PONTOS",
-    content: ` **  Produto virou vale pontos  ** 
+    content: `• Produto virou vale pontos 🎁
 
-Eu verifiquei no sistema, e consta que o seu produto foi 
-convertido em vale pontos para que você possa resgatar um 
-outro produto.
+Eu verifiquei no sistema e consta que o seu produto foi convertido em vale pontos para que você possa resgatar outro produto. 🔄
 
-**  Enviar para o N2 – Não virou vale pontos.  **
+• Enviar para o N2 – Não virou vale pontos 🚫
 
-Como já passou o prazo de dois ciclos e o produto não foi 
-convertido em vale pontos, irei registrar uma ocorrência para 
-que a área interna da natura faça uma análise.`
+Como já passou o prazo de dois ciclos e o produto não foi convertido em vale pontos, irei registrar uma ocorrência para que a área interna da Natura faça uma análise. 📝🔍`
   },
 
   {
     title: "CANCELAMENTO DE PEDIDO",
-    content: `**  Solicitar pedido  **
+    content: `• Solicitar pedido 🛒
 
-Qual o número do pedido que você deseja o cancelamento? 
+Qual o número do pedido que você deseja cancelar? ❓
 
-**  Motivo do cancelamento  **
+• Motivo do cancelamento ❗
 
-Qual é o motivo do cancelamento do pedido? 
+Qual é o motivo do cancelamento do pedido? 📝
 
-**  Confirmação combinado  **
+• Confirmação combinado 🤝
 
-Consta em sistema que é um pedido combinado, sendo assim se eu 
-solicitar o cancelamento de um, ambos serão cancelados. Posso 
-prosseguir com o cancelamento? 
+Consta no sistema que é um pedido combinado. Sendo assim, se eu solicitar o cancelamento de um, ambos serão cancelados. Posso prosseguir com o cancelamento? ⚠️
 
-**  Pedido cancelado  **
+• Pedido cancelado ✅
 
-Eu registrei a ocorrência em sistema. O seu pedido foi cancelado. A 
-confirmação chega para você por e-mail junto com o número de 
-protocolo.
+Eu registrei a ocorrência no sistema. Seu pedido foi cancelado. A confirmação será enviada para você por e-mail, junto com o número do protocolo. 📧
 
-**  Cancelamento de pedido em transporte  **
+• Cancelamento de pedido em transporte 🚚
 
-Eu registrei a solicitação de cancelamento, a confirmação chegará 
-para você por e-mail junto com o número de protocolo. Como 
-consta que o seu pedido está em transporte ele será devolvido para 
-a natura até o dia XXXXX. 
+Eu registrei a solicitação de cancelamento. A confirmação chegará por e-mail, junto com o número do protocolo. Como consta que seu pedido está em transporte, ele será devolvido para a Natura até o dia XXXXX. 📦
 
-**  Erro 20 Preparação da caixa  **
+• Erro 20 – Preparação da caixa ⚠️
 
-Ao fazer o registro de cancelamento, infelizmente deu erro, peço 
-que você retorne assim que o seu pedido estiver em transporte. 
-Você pode acompanhar o Status do seu pedido pelo App/Site.`
+Ao registrar o cancelamento, infelizmente ocorreu um erro. Peço que você retorne assim que o seu pedido estiver em transporte. Você pode acompanhar o status pelo App/Site. 📲`
   },
 
 
@@ -285,12 +262,15 @@ Ficarei aguardando sua avaliação com muito carinho!⭐`
 
   {
     title: "CESSAMENTO - CESSADO",
-    content: `Seu cadastro foi cessado por inatividade, pois você ficou tempo demais sem passar 
-pedidos. Caso você queira voltar a revender, por gentileza acesse o site 
-http://www.natura.com.br/cadastre-se e preencha os dados. Caso não consiga concluir 
-pois informa que o CPF já está cadastrado entre em contato com a nossa central pelo 
-número: 0800 –762- 8872 com a nossa central. Funcionamos de segunda à sexta das 
-07:00 às 22:00 e sábado das 09:00 às 20:00.`
+    content: `Seu cadastro foi cessado por inatividade, pois você ficou muito tempo sem passar pedidos.
+
+Se desejar voltar a revender, por gentileza, acesse o site:
+👉 http://www.natura.com.br/cadastre-se
+ e preencha os seus dados.
+
+Caso não consiga concluir o cadastro porque informa que o CPF já está registrado, entre em contato com a nossa central pelo número: 📞 0800–762–8872.
+
+Funcionamos de segunda a sexta, das 07:00 às 22:00, e aos sábados, das 09:00 às 20:00.`
   },
 
  {
@@ -319,14 +299,21 @@ natconsultora@natura.net.`
 
   {
     title: "Bloqueio 7",
-    content: `Seu cadastro foi bloqueado por títulos vencidos, você não conseguirá passar pedidos em outra modalidade que não seja à vista no momento. Realize um acordo pelo site ou 
-aplicativo Minha Consultoria na aba de "meus títulos", selecione todos os boletos 
-vencidos e clique em "formas de pagamento". Lá você conseguirá localizar o meio de 
-pagamento, quantidade de parcelas, prazo para primeira parcela e as futuras. Após o 
-pagamento da primeira parcela, dentro de 72 horas o seu cadastro já deverá ser 
-desbloqueado. É importante lembrar que este bloqueio altera a sua modalidade 
-comercial e ficará na modalidade à vista, futuras análises devem ser realizadas e caso 
-você passe pedidos e realize o pagamento de maneira correta para que as novas análises`
+    content: `Seu cadastro foi bloqueado devido a títulos vencidos. No momento, você só poderá realizar pedidos na modalidade à vista. 💳
+
+Para regularizar a situação, faça um acordo pelo site ou pelo aplicativo Minha Consultoria:
+
+Acesse a aba "Meus títulos"
+
+Selecione todos os boletos vencidos
+
+Clique em "Formas de pagamento"
+
+Lá você poderá escolher o meio de pagamento, a quantidade de parcelas, o prazo para a primeira parcela e as seguintes. 📅💰
+
+Após o pagamento da primeira parcela, em até 72 horas seu cadastro deverá ser desbloqueado. ⏳✅
+
+Importante: esse bloqueio altera sua modalidade comercial para à vista. Futuras análises serão realizadas e, para que seu cadastro seja liberado para outras modalidades, é fundamental que os pedidos sejam feitos e pagos corretamente. 🔄`
   },
 
 
@@ -355,33 +342,31 @@ estejam em aberto, e a segunda opção, seria entrando em contato com a nossa as
 
   {
     title: "Reparações - Incorporação",
-    content: ` O sistema disponibilizou a incorporação como reparação. Você já sabe como funciona?
+    content: `O sistema disponibilizou a incorporação como forma de reparação. Você já sabe como funciona? 🤔
 
-A incorporação é a disponibilização de produtos que foram danificados ou faltaram no
-seu pedido. Para resgatar a incorporação basta passar pedidos dentro de até 2 ciclos (não
-é no próximo pedido e sim dentro de 2 ciclos). Para aceitar a incorporação, no momento
-em que você for passar fo pedido, basta clicar em "aceitar" que o produto será adicionado
-na sua caixa completamente isento de custos! Caso você não consiga ou possa passar
-pedidos dentro de 2 ciclos, ou o produto incorporado não esteja disponível no estoque, os
-produtos tornam-se vale-pontos que podem ser utilizados para resgatar brindes e outros
-produtos não promocionais.
-Lembrando que uma vez que a solução da incorporação for disponibilizada não há como
-alterá-la. Você aceita esse meio de reparação?`
+
+A incorporação é a disponibilização dos produtos danificados ou faltantes no seu pedido. Para resgatá-la, basta passar pedidos dentro de até 2 ciclos (não no próximo pedido, mas dentro de 2 ciclos).
+No momento de passar o pedido, clique em “aceitar” e o produto será adicionado à sua caixa, totalmente sem custos! 🎁
+Caso você não consiga passar pedidos nesse prazo, ou se o produto incorporado não estiver disponível em estoque, ele será convertido em vale-pontos para que você possa resgatar brindes e outros produtos não promocionais. 🎟️
+Lembre-se que, após a solução ser disponibilizada, não é possível alterá-la.
+Você aceita essa forma de reparação? ✔️❓`
   },
   {
     title: "Reparações - Nota de Crédito",
-    content: `Nota de crédito, como diz pelo próprio nome, é um crédito que ficará disponível em
-sistema de acordo com preço dos produtos que estavam danificados ou faltaram nos
-pedidos das consultoras. Esta nota será abatida automaticamente pelo sistema em seu
-próximo pedido ou em um título que já esteja em aberto, isso significa que você irá pagar
-a diferença entre o título e a nota de crédito!
+    content: `Nota de crédito é, como o próprio nome diz, um crédito disponível no sistema referente ao valor dos produtos que estavam danificados ou faltaram nos pedidos das consultoras. 💳
 
-Com a nota de crédito, o valor é disponibilizado no cadastro e pode ser abatido automaticamente no próximo pedido em boleto tradicional, solicitado o abatimento em boleto tradicional em aberto ou reembolso do valor em conta corrente do titular. 
+Essa nota será abatida automaticamente pelo sistema no seu próximo pedido ou em um título já em aberto. Isso significa que você pagará apenas a diferença entre o valor do título e o valor da nota de crédito! ⚖️
 
+Com a nota de crédito, o valor fica disponível no seu cadastro e pode ser utilizado de três formas:
 
-O reembolso precisa ser feito em conta corrente em nome do títular, não pode ser conta conjunta. 
+* Abatido automaticamente no próximo pedido via boleto tradicional 📄
+* Solicitado o abatimento em boleto tradicional já em aberto 🧾
+* Solicitação de reembolso do valor em conta corrente do titular 💰
+
+Importante: o reembolso precisa ser feito em conta corrente em nome do titular, não sendo permitida conta conjunta. 🚫👥. 
 `
   },
+	
   {
     title: "Status do Pedido",
     content: `Essa solicitação só é permitida sistematicamente após o faturamento do pedido, peço que aguarde a atualização do status para "faturado em transporte" no seu app/site para conseguirmos prosseguir com esse caso. Tudo bem?
@@ -406,33 +391,35 @@ Como prefere prosseguir com a negociação?`
   },
 	
   {
-    title: "Crédito - Limite",
-    content: `A central não trata limite de crédito.
-Solicitações apenas via WhatsApp 11 93036-0000.`
-  },
-  {
     title: "Pedido Pendente por Crédito",
-    content: `O pedido excedeu o limite de crédito.
-Se o limite for reajustado até a data, será liberado.
-Caso contrário, será cancelado automaticamente.`
+    content: `O pedido excedeu o limite de crédito. ⚠️
+Se o limite for reajustado até a data, o pedido será liberado. ✅
+Caso contrário, será cancelado automaticamente. ❌`
   },
 
   {
     title: "Crítica",
-    content: `Sua crítica será encaminhada ao setor responsável.
-Protocolo xxxxxx. Não há retorno para este tipo de ocorrência.`
+    content: `Obrigado pelo seu feedback! Sua crítica foi encaminhada para o setor responsável.
+Protocolo: xxxxxx.
+
+Neste caso, não há retorno, mas fique tranquilo(a), seu comentário será considerado para melhorar nossos serviços. 😊`
   },
+	
   {
     title: "Elogio",
-    content: `Agradecemos sua preferência!
-Será encaminhado ao setor responsável.
-Protocolo xxxxxx.`
+    content: `Agradecemos muito a sua preferência! 💚
+Sua solicitação será encaminhada ao setor responsável.
+Protocolo: xxxxxx.
+
+Estamos à disposição para ajudar no que precisar! 😊`
   },
   {
     title: "Sugestão",
-    content: `Sua sugestão é valiosa.
-Encaminharemos para o setor responsável.
-Protocolo xxxxxx.`
+    content: `Sua sugestão é muito importante para nós! 🙌
+Já encaminhamos para o setor responsável.
+Protocolo: xxxxxx.
+
+Obrigado por contribuir com a melhoria dos nossos serviços! 😊`
   },
 
 
@@ -493,30 +480,27 @@ Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/322563/tecnologia-pro
 
   {
     title: "Acordo de Espera",
-    content: `**  Pedir para aguardar  **
+    content: `• Pedir para aguardar ⏳
 
-Peço que aguarde um momento, pois vou registrar as informações, 
-e logo retorno com você, tudo bem? 
+Peço que aguarde um momento, pois vou registrar as informações e logo retorno com você, tudo bem? 😊
 
-Aguarde um momento por gentileza, enquanto registro a solicitação 
-em sistema, caso necessário estou à disposição.
+Aguarde um momento, por gentileza, enquanto registro a solicitação no sistema. Caso necessário, estou à disposição. 📝💻
 
-Aguarde um momento, por favor, enquanto verifico a informação 
-em sistema, caso necessário estou à disposição.
+Aguarde um momento, por favor, enquanto verifico a informação no sistema. Caso precise, estou à disposição. 🔍📊
 
-Será encaminhado ao setor responsável.
-Protocolo xxxxxx.
+A solicitação será encaminhada ao setor responsável. ✅
 
- **  Pedir um momento  **
+Protocolo: xxxxxx. 🆔
 
-Mais um momento por gentileza, estou verificando a informação.
+• Pedir um momento 🙏
 
-Mais um momento por gentileza, estou registrando a informação.
+Mais um momento, por gentileza, estou verificando a informação. 👀
 
-Só mais um momento por gentileza, estou registrando as informações na ocorrência, logo retorno com você.
+Mais um momento, por gentileza, estou registrando a informação. 🖋️
+
+Só mais um momento, por gentileza, estou registrando as informações na ocorrência. Logo retorno com você. ⏳😊.
 `
   },
-
 
 
   {
