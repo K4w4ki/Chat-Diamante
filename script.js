@@ -86,7 +86,7 @@ Valor correto: R$
 
   },
   {
-    title: "Defeito - Solicitação",
+    title: "Defeito - Solicitação | Beedoo",
     content: 
 `Para que consigamos abrir uma solicitação de defeito, peço que me informe alguns dados que estarei solicitando em seguida:
 
@@ -99,7 +99,7 @@ Cheio, vazio ou pela metade:
 Descrição do defeito:
 Imagem do produto defeituoso.
 
-Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/447144/acuracidade-manifestacoes-de-qualidade
+https://naturaeavon.beedoo.io/wiki/447144/acuracidade-manifestacoes-de-qualidade
 `
 
   },
@@ -118,7 +118,7 @@ Consegue me informar esses dados?
   },
 
   {
-    title: "CHECKLIST PARA FALTA - PRODUTO FATURADO",
+    title: "CHECKLIST PARA FALTA - PRODUTO FATURADO | Beedoo",
     content: `Informações para implementar na tabulação.
 	
 * Número do pedido:
@@ -132,7 +132,7 @@ Consegue me informar esses dados?
 * Recebeu produto a mais? Se sim, informar Código + Nome do produto:
 * Quem realizou a captação do pedido?:
 
-Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/322392/pos-compra
+https://naturaeavon.beedoo.io/wiki/322392/pos-compra
 `
   },
 	
@@ -232,19 +232,19 @@ Já vou te direcionar pra equipe certa, que vai te dar aquela força! 🧡`
   },
 
   {
-    title: "Bloqueios Diversos.",
+    title: "Bloqueios Diversos | Beedoo",
     content: `CASOS PARA CONSULTORAS COM QUAISQUER OUTRO TIPO DE BLOQUEIO EM SUA CONTA, SEGUE A WIKI:
 
-Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/443020/bloqueio-e-desbloqueio-de-cadastro
+https://naturaeavon.beedoo.io/wiki/443020/bloqueio-e-desbloqueio-de-cadastro
  `
   },
 
   {
-    title: "Emana Pay.",
+    title: "Emana Pay | Beedoo",
     content: `Atendimento Emana Pay - Situações e quando fazer:
-casos para a consultora com problemas no emana pay, segue a wiki:
+casos para a consultora com problemas no emana pay, segue a wiki.
 
-Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/346278/emana-pay
+https://naturaeavon.beedoo.io/wiki/346278/emana-pay
  `
   },
 
@@ -424,7 +424,7 @@ Obrigado por contribuir com a melhoria dos nossos serviços! 😊`
 
 
   {
-    title: "Squid - Atendimento N1 – Prestar informações",
+    title: "Squid - Atendimento N1 – Prestar informações | Beedoo",
     content: `deve orientar a CB Treinadora que realize abertura de chamado dentro da plataforma de treinamentos Squid nos casos abaixo:
 
 1 - Problemas de agendamento e reagendamento;
@@ -448,12 +448,12 @@ Tabulação N1:
 3 - Selecionar a solução manual N1: Informação;
 4 - Clique em salvar ocorrência. (finalizadora da ocorrência) 
 
-Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/403201/consultora-de-beleza-treinadora
+https://naturaeavon.beedoo.io/wiki/403201/consultora-de-beleza-treinadora
 `
 },
 	
   {
-    title: "Tecnologia - B.O no Aplicativo",
+    title: "Tecnologia - B.O no Aplicativo | Beedoo",
     content: `Para que possamos prosseguir com a solicitação, peço que me encaminhe os seguintes dados, por gentileza.
 
 Qual o modelo do celular:
@@ -473,7 +473,7 @@ Dados a parte para tabulação.
 * Acesso via site: descrever qual o tipo de navegador está utilizando e qual a versão
 * Descrição detalhada do erro: 
 
-Link da Wiki no Beedoo: https://naturaeavon.beedoo.io/wiki/322563/tecnologia-problemas-sites-e-apps
+https://naturaeavon.beedoo.io/wiki/322563/tecnologia-problemas-sites-e-apps
 `
   },
 
@@ -601,7 +601,8 @@ Horário de Atendimento: Seg a Sex das 8h as 20h \ Sábados das 9h as 20h
   },
   {
     title: "Captação de Pedido - Link",
-    content: `http://pedidoscan.natura.net/captacao/consultar_pedido_CRM.html?codConsultora=26320096&origem=1`
+    content: ` CB COM PROBLEMA NO CAPTA, LINK DISPONÍVEL.
+http://pedidoscan.natura.net/captacao/consultar_pedido_CRM.html?codConsultora=26320096&origem=1`
   },
   {
     title: "Contatos EmanaPay",
@@ -645,6 +646,7 @@ function createSections() {
     section.appendChild(pre);
     section.appendChild(btn);
     container.appendChild(section);
+    addOpenLinkButton(section, content); 
   });
 }
 
@@ -714,11 +716,14 @@ saveBtn.addEventListener("click", () => {
   const btnCopy = document.createElement("button");
   btnCopy.textContent = "Copiar";
   btnCopy.className = "copy-btn";
-  btnCopy.onclick = () => {
-    navigator.clipboard.writeText(content);
-    btnCopy.textContent = "Copiado!";
-    setTimeout(() => (btnCopy.textContent = "Copiar"), 1500);
-  };
+btnCopy.onclick = () => {
+  const regex = /(https?:\/\/[^\s]+)/g;
+  const cleanContent = content.replace(regex, "").trim();
+  navigator.clipboard.writeText(cleanContent);
+  btnCopy.textContent = "Copiado!";
+  setTimeout(() => (btnCopy.textContent = "Copiar"), 1500);
+};
+
 
   const btnDelete = document.createElement("button");
   btnDelete.textContent = "🗑️";
@@ -734,6 +739,7 @@ saveBtn.addEventListener("click", () => {
   section.appendChild(btnCopy);
   section.appendChild(btnDelete);
   addEditButton(section, title, content);
+  addOpenLinkButton(section, content); 
   contentArea.prepend(section);
   modal.style.display = "none";
 
@@ -756,11 +762,14 @@ window.addEventListener("load", () => {
     const btnCopy = document.createElement("button");
     btnCopy.textContent = "Copiar";
     btnCopy.className = "copy-btn";
-    btnCopy.onclick = () => {
-      navigator.clipboard.writeText(content);
-      btnCopy.textContent = "Copiado!";
-      setTimeout(() => (btnCopy.textContent = "Copiar"), 1500);
-    };
+btnCopy.onclick = () => {
+  const regex = /(https?:\/\/[^\s]+)/g;
+  const cleanContent = content.replace(regex, "").trim();
+  navigator.clipboard.writeText(cleanContent);
+  btnCopy.textContent = "Copiado!";
+  setTimeout(() => (btnCopy.textContent = "Copiar"), 1500);
+};
+
 
     const btnDelete = document.createElement("button");
     btnDelete.textContent = "🗑️";
@@ -775,6 +784,7 @@ window.addEventListener("load", () => {
     section.appendChild(btnCopy);
     section.appendChild(btnDelete);
     addEditButton(section, title, content);
+    addOpenLinkButton(section, content); 
 
     contentArea.prepend(section);
   });
@@ -1258,3 +1268,21 @@ atualizarDatalist();
 
 window.addEventListener('scroll', revelarEmojisScroll);
 window.addEventListener('load', revelarEmojisScroll); // já revela os primeiros ao carregar
+
+function addOpenLinkButton(section, content) {
+  const regex = /(https?:\/\/[^\s]+)/g;
+  const match = content.match(regex);
+  if (match && match.length > 0) {
+    // remove o link do texto mostrado
+    const pre = section.querySelector("pre");
+    pre.textContent = content.replace(regex, "").trim();
+
+    // cria botão verde
+    const btnLink = document.createElement("button");
+    btnLink.textContent = "📝 Beedoo";
+    btnLink.className = "open-link-btn";
+    btnLink.title = "Abrir link do Beedoo";
+    btnLink.onclick = () => window.open(match[0], "_blank");
+    section.appendChild(btnLink);
+  }
+}
