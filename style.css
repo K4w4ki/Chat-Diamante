@@ -1338,3 +1338,33 @@ button.create-btn:hover {
 /* scrollbar nice */
 .chat-messages::-webkit-scrollbar { width:10px; }
 .chat-messages::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.08); border-radius:8px; }
+
+.open-link-btn {
+  position: absolute;
+  top: 15px;
+  right: 100px; /* ajusta para ficar antes dos outros */
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.open-link-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.4), rgba(255,255,255,0));
+  transform: skewX(-25deg);
+}
+
+.open-link-btn:hover::before {
+  animation: shine 0.75s ease forwards;
+}
