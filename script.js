@@ -637,7 +637,9 @@ function createSections() {
     btn.textContent = "Copiar";
     btn.className = "copy-btn";
     btn.onclick = () => {
-      navigator.clipboard.writeText(content);
+  const regexBeedoo = /https?:\/\/[^\s]*beedoo\.io[^\s]*/g;
+  const cleanContent = content.replace(regexBeedoo, "").trim();
+      navigator.clipboard.writeText(cleanContent);
       btn.textContent = "Copiado!";
       setTimeout(() => (btn.textContent = "Copiar"), 1500);
     };
@@ -717,13 +719,12 @@ saveBtn.addEventListener("click", () => {
   btnCopy.textContent = "Copiar";
   btnCopy.className = "copy-btn";
 btnCopy.onclick = () => {
-  const regex = /(https?:\/\/[^\s]+)/g;
-  const cleanContent = content.replace(regex, "").trim();
+  const regexBeedoo = /https?:\/\/[^\s]*beedoo\.io[^\s]*/g;
+  const cleanContent = content.replace(regexBeedoo, "").trim();
   navigator.clipboard.writeText(cleanContent);
   btnCopy.textContent = "Copiado!";
   setTimeout(() => (btnCopy.textContent = "Copiar"), 1500);
 };
-
 
   const btnDelete = document.createElement("button");
   btnDelete.textContent = "🗑️";
@@ -763,12 +764,13 @@ window.addEventListener("load", () => {
     btnCopy.textContent = "Copiar";
     btnCopy.className = "copy-btn";
 btnCopy.onclick = () => {
-  const regex = /(https?:\/\/[^\s]+)/g;
-  const cleanContent = content.replace(regex, "").trim();
+  const regexBeedoo = /https?:\/\/[^\s]*beedoo\.io[^\s]*/g;
+  const cleanContent = content.replace(regexBeedoo, "").trim();
   navigator.clipboard.writeText(cleanContent);
   btnCopy.textContent = "Copiado!";
   setTimeout(() => (btnCopy.textContent = "Copiar"), 1500);
 };
+
 
 
     const btnDelete = document.createElement("button");
@@ -1024,20 +1026,38 @@ const frasesMascote = [
   "Bora finalizar com excelência! 🎯"
 ];
 
-
-function falarMascote() {
+function mostrarFalaMascote(texto) {
   const fala = document.getElementById("fala-do-mascote");
-  const novaFrase = frasesMascote[Math.floor(Math.random() * frasesMascote.length)];
-  fala.textContent = novaFrase;
+  if (!fala) return;
+
+  fala.textContent = "";
+  fala.classList.add("show");
+
+  let i = 0;
+  const interval = setInterval(() => {
+    fala.textContent += texto[i];
+    i++;
+    if (i >= texto.length) clearInterval(interval);
+  }, 40); // velocidade da digitação
+
+  // Balão some depois de 5s
+  setTimeout(() => {
+    fala.classList.remove("show");
+  }, 5000);
 }
 
-setInterval(falarMascote, 25000); // a cada 10 segundos troca a frase
 
-        // Aqui você pode adicionar eventos se precisar de interatividade extra
-        const emoji = document.querySelector('#mascote div');
-        emoji.addEventListener('click', () => {
-            alert('Emoji de cowboy clicado!');
-        });
+// Troca a cada 10 segundos
+setInterval(() => {
+  const frase = frasesMascote[Math.floor(Math.random() * frasesMascote.length)];
+  mostrarFalaMascote(frase);
+}, 10000);
+
+// Mostra uma frase inicial ao carregar
+window.addEventListener("load", () => {
+  const frase = frasesMascote[Math.floor(Math.random() * frasesMascote.length)];
+  mostrarFalaMascote(frase);
+});
 
 
   const searchInput = document.getElementById("searchInput");
@@ -1270,7 +1290,7 @@ window.addEventListener('scroll', revelarEmojisScroll);
 window.addEventListener('load', revelarEmojisScroll); // já revela os primeiros ao carregar
 
 function addOpenLinkButton(section, content) {
-  const regex = /(https?:\/\/[^\s]+)/g;
+  const regex = /https?:\/\/[^\s]*beedoo\.io[^\s]*/g;
   const match = content.match(regex);
   if (match && match.length > 0) {
     // remove o link do texto mostrado
