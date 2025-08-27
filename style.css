@@ -639,65 +639,73 @@ button.create-btn:hover {
   left: 125%;
 }
 
-
 #mascote {
   position: fixed;
-  bottom: 50px;
-  right: 60px;
-  z-index: 999;
-  font-size: 2.2rem;
-  cursor: default;
-  transition: transform 0.3s ease;
-}
-#fala-do-mascote {
-  background: white;
-  color: #333;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  margin-bottom: 8px;
-  font-size: 0.9rem;
-  max-width: 190px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  animation: falaMascote 0.4s ease;
-}
-@keyframes falaMascote {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  bottom: 30px;
+  right: 90px;
+  z-index: 500; /* menor que os balões de informação, pra não sobrepor */
 }
 
-        /* Animação ao passar o mouse */
-        #mascote div:hover {
-            transform: rotate(360deg);
-            color: #FFD700; /* Mudança de cor para dourado */
-        }
-
-#fala-do-mascote {
+.mascote-img {
   position: relative;
-  background: linear-gradient(135deg, #d4f9d3, #b2eab5);
-  color: #333;
-  padding: 0.8rem 1.2rem;
-  border-radius: 20px;
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-  max-width: 220px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
-  font-weight: bold;
-  animation: falaMascote 0.4s ease;
-  border: 2px solid #006400;
+  width: 100px;
+  height: 100px;
 }
 
+.mascote-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Balão de fala acima do mascote */
+#fala-do-mascote {
+  position: absolute;
+  bottom: 100%;
+  right: 50%;
+  transform: translateX(50%) translateY(-15px) scale(0.9);
+  max-width: 240px;
+  background: linear-gradient(135deg, #fff8c6, #ffe97d);
+  border: 2px solid #e6c300;
+  border-radius: 16px;
+  padding: 12px 29px;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+}
+
+/* Triângulo do balão */
 #fala-do-mascote::after {
   content: "";
   position: absolute;
-  bottom: -10px;
-  left: 20px;
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-top-color: #006400;
-  border-bottom: 0;
-  margin-left: -5px;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: #ffe97d transparent transparent transparent;
+  filter: drop-shadow(0 -2px 2px rgba(0,0,0,0.1));
 }
+
+#fala-do-mascote.show {
+  opacity: 1;
+  transform: translateX(50%) translateY(-25px) scale(1);
+}
+
+
+/* Classe para exibir animado */
+#fala-do-mascote.show {
+  opacity: 1;
+  transform: translateX(50%) translateY(-20px);
+}
+
 
 /* Botão fixo no canto direito */
 #botaoPausa {
