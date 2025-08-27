@@ -471,7 +471,8 @@ A consultora de beleza precisa informar o código de consultora.
 🥇 Ouro: 38%
 💎 Diamante: 38%
 
-🏡 Para todos os níveis, nas compras de Casa & Estilo, a comissão é de 15%.`
+🏡 Para todos os níveis, nas compras de Casa & Estilo, a comissão é de 15%.
+https://naturaeavon.beedoo.io/wiki/464839/minha-loja`
 
 },
 	
