@@ -422,7 +422,6 @@ Protocolo: xxxxxx.
 Obrigado por contribuir com a melhoria dos nossos serviços! 😊`
   },
 
-
   {
     title: "Squid - Atendimento N1 – Prestar informações | Beedoo",
     content: `deve orientar a CB Treinadora que realize abertura de chamado dentro da plataforma de treinamentos Squid nos casos abaixo:
@@ -450,6 +449,30 @@ Tabulação N1:
 
 https://naturaeavon.beedoo.io/wiki/403201/consultora-de-beleza-treinadora
 `
+},
+
+  {
+    title: "Minha Loja - Atendimento | Beedoo",
+    content: `🚨 Atenção, Consultora! 🚨
+
+🛒 Problemas relacionados a pedidos realizados na Minha Loja serão atendidos exclusivamente pela célula de atendimento via WhatsApp.
+
+📲 WhatsApp: +55 (11) 4389-9441
+
+✨ Importante:
+A consultora de beleza precisa informar o código de consultora.
+👉 Caso ela faça parte do projeto Minha Loja, será direcionada para o atendimento humano.
+
+💎 EXTRA – Comissão sobre compras online Avon 💎
+
+🌱 Semente: 20%
+🥉 Bronze: 30%
+🥈 Prata: 35%
+🥇 Ouro: 38%
+💎 Diamante: 38%
+
+🏡 Para todos os níveis, nas compras de Casa & Estilo, a comissão é de 15%.`
+
 },
 	
   {
