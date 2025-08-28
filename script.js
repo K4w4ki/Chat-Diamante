@@ -1055,7 +1055,7 @@ function mostrarFalaMascote(texto) {
   if (!fala) return;
 
   fala.textContent = "";
-  fala.classList.add("show");
+  fala.classList.add("Null");
 
   let i = 0;
   const interval = setInterval(() => {
