@@ -908,7 +908,47 @@ btnCopy.onclick = () => {
     });
   });
 
-const frasesMascote = [
+
+let intervaloDigitando;
+let timeoutEsconder;
+let timeoutTroca;
+
+// Função que mostra a fala do mascote simulando digitação
+function mostrarFalaMascote(frases) {
+  const fala = document.getElementById("fala-do-mascote");
+  if (!fala) return;
+
+  // limpa timers antigos (evita acumular ao trocar de aba)
+  clearInterval(intervaloDigitando);
+  clearTimeout(timeoutEsconder);
+  clearTimeout(timeoutTroca);
+
+  const frase = frases[Math.floor(Math.random() * frases.length)];
+  fala.textContent = "";
+  fala.classList.add("show");
+
+  let i = 0;
+  intervaloDigitando = setInterval(() => {
+    fala.textContent += frase[i];
+    i++;
+    if (i >= frase.length) {
+      clearInterval(intervaloDigitando);
+
+      // esconde depois de 4s
+      timeoutEsconder = setTimeout(() => {
+        fala.classList.remove("show");
+      }, 4000);
+
+      // mostra outra frase depois de 10s
+      timeoutTroca = setTimeout(() => {
+        mostrarFalaMascote(frases);
+      }, 10000);
+    }
+  }, 100); // velocidade da digitação
+}
+
+
+  const frasesMascote = [
   "Piscoooou, Tabulouuuu ✏️",
   "Tabulou ou ficou só na vontade? 😜",
   "Já fez sua primeira tabulação do dia? 📞",
@@ -1050,40 +1090,19 @@ const frasesMascote = [
   "Bora finalizar com excelência! 🎯"
 ];
 
-function mostrarFalaMascote(texto) {
-  const fala = document.getElementById("fala-do-mascote");
-  if (!fala) return;
+// iniciar
+mostrarFalaMascote(frasesMascote);
 
-  fala.textContent = "";
-  fala.classList.add("Null");
-
-  let i = 0;
-  const interval = setInterval(() => {
-    fala.textContent += texto[i];
-    i++;
-    if (i >= texto.length) clearInterval(interval);
-  }, 40); // velocidade da digitação
-
-  // Balão some depois de 5s
-  setTimeout(() => {
-    fala.classList.remove("show");
-  }, 5000);
-}
-
-
-// Troca a cada 10 segundos
-setInterval(() => {
-  const frase = frasesMascote[Math.floor(Math.random() * frasesMascote.length)];
-  mostrarFalaMascote(frase);
-}, 10000);
-
-// Mostra uma frase inicial ao carregar
-window.addEventListener("load", () => {
-  const frase = frasesMascote[Math.floor(Math.random() * frasesMascote.length)];
-  mostrarFalaMascote(frase);
+// pausar/reiniciar ao trocar de aba
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    clearInterval(intervaloDigitando);
+    clearTimeout(timeoutEsconder);
+    clearTimeout(timeoutTroca);
+  } else {
+    mostrarFalaMascote(frasesMascote);
+  }
 });
-
-
   const searchInput = document.getElementById("searchInput");
   const wrapper = searchInput.closest(".search-wrapper");
 
@@ -1330,3 +1349,141 @@ function addOpenLinkButton(section, content) {
     section.appendChild(btnLink);
   }
 }
+
+// ---- BOTÃO DE TEMAS ----
+const botaoTema = document.getElementById("botaoTema");
+const temaContainer = document.getElementById("temaContainer");
+const listaTemas = document.getElementById("listaTemas");
+
+botaoTema.addEventListener("click", () => {
+  temaContainer.classList.toggle("show");
+});
+
+listaTemas.querySelectorAll("li").forEach(item => {
+  item.addEventListener("click", () => {
+    const tema = item.dataset.tema;
+    aplicarTema(tema);
+    temaContainer.classList.remove("show");
+  });
+});
+
+
+// 🔹 Tema atual começa como Girassol (padrão)
+let temaAtual = "girassol";
+
+function aplicarTema(tema) {
+  const overlay = document.querySelector(".theme-transition");
+
+  // ativa o fade
+  overlay.classList.add("active");
+
+  setTimeout(() => {
+    // aplica o tema normalmente
+    aplicarTemaInterno(tema);
+    temaAtual = tema; // guarda o último tema escolhido
+
+    // desativa o fade suavemente
+    setTimeout(() => {
+      overlay.classList.remove("active");
+    }, 400); // fade out
+  }, 900); // loading
+}
+
+function aplicarTemaInterno(tema) {
+  const logoEquipe = document.querySelector(".logo-girassol");
+  const logoChat = document.querySelector(".logo-diamante");
+  const favicon = document.getElementById("favicon");
+  const atendimentoDiv = document.querySelector(".Atendimento");
+  const mascoteImg = document.querySelector("#mascote img");
+
+  // =====================
+  // 🔹 Tema Querubim 🐷
+  // =====================
+  if (tema === "querubim") {
+    favicon.href = "https://emojiapi.dev/api/v1/1f437.svg";
+    document.body.classList.add("tema-querubim");
+
+    if (atendimentoDiv) atendimentoDiv.textContent = "🐷 Atendimento";
+    document.title = "Equipe Querubim • Atendimento Can 🐷";
+    logoEquipe.textContent = "🐷 Equipe Querubim";
+    logoChat.textContent = "• Chat Can";
+
+    // estilos texto
+    logoEquipe.style.color = "#ffffff";
+    logoEquipe.style.textShadow = `
+      -1px -1px 0 #3B2F2F, 
+       1px -1px 0 #3B2F2F,
+      -1px  1px 0 #3B2F2F,
+       1px  1px 0 #3B2F2F
+    `;
+    logoChat.style.color = "#ffffff";
+    logoChat.style.textShadow = `
+      -1px -1px 0 #3B2F2F, 
+       1px -1px 0 #3B2F2F,
+      -1px  1px 0 #3B2F2F,
+       1px  1px 0 #3B2F2F
+    `;
+
+    // supervisora
+    document.querySelector(".supervisora strong").textContent = "Victoria Ferracin";
+
+    // cores do header e body
+    document.querySelector("header").style.background = "#4aa3a3";
+    document.body.style.background = "#fcd5b5";
+
+    document.querySelector("header").style.backgroundImage =
+      "radial-gradient(rgba(30, 90, 90, 0.3) 30%, transparent 30%)";
+    document.querySelector("header").style.backgroundSize = "20px 20px";
+
+    document.body.style.backgroundImage =
+      "radial-gradient(rgba(240, 150, 120, 0.25) 25%, transparent 25%), linear-gradient(to bottom, #fcd5b5, #fcd5b5)";
+    document.body.style.backgroundSize = "50px 50px, 100% 100%";
+
+    // mascote
+    mascoteImg.src = "mascote2.png";
+    mascoteImg.alt = "Mascote Querubim";
+    document.getElementById("fala-do-mascote").textContent = "Olá Querubim 🐷";
+  }
+
+  // =====================
+  // 🔹 Tema Girassol 🌻 (reset)
+  // =====================
+  else if (tema === "girassol") {
+    favicon.href = "https://emojiapi.dev/api/v1/1f33b.svg";
+    document.body.classList.remove("tema-querubim");
+
+    if (atendimentoDiv) atendimentoDiv.textContent = "🌻 Atendimento";
+    document.title = "Equipe Girassol 🌻 | Atendimento Diamante 💎";
+    logoEquipe.textContent = "🌻 Equipe Girassol";
+    logoChat.textContent = "• Chat Diamante 💎";
+
+    // reset estilos texto
+    logoEquipe.style.color = "";
+    logoEquipe.style.textShadow = "";
+    logoChat.style.color = "";
+    logoChat.style.textShadow = "";
+
+    // supervisora original
+    document.querySelector(".supervisora strong").textContent = "Maria Alice";
+
+    // reset cores
+    document.querySelector("header").style.background = "";
+    document.querySelector("header").style.backgroundImage = "";
+    document.querySelector("header").style.backgroundSize = "";
+    document.body.style.background = "";
+    document.body.style.backgroundImage = "";
+    document.body.style.backgroundSize = "";
+
+    // mascote original
+    mascoteImg.src = "mascote.png";
+    mascoteImg.alt = "Mascote Girassol Diamante";
+    document.getElementById("fala-do-mascote").textContent = "Olá Girassol 🌻";
+  }
+}
+
+// 🔹 Quando a aba volta a ficar ativa → reaplica o último tema
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) {
+    aplicarTemaInterno(temaAtual);
+  }
+});
