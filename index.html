@@ -5,8 +5,13 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Equipe Girassol 🌻 | Atendimento Diamante 💎</title>
   <link href="https://emojiapi.dev/api/v1/1f33b.svg" rel="icon" type="image/svg+xml"/>
+<link id="favicon" rel="icon" type="image/svg+xml" href="https://emojiapi.dev/api/v1/1f33b.svg"/>
+
   <link href="style.css" rel="stylesheet"/>
   
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+
+
   <!-- Highlight.js (para colorir código) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -19,6 +24,15 @@
     <div class="supervisora">👩‍💼 Supervisora: <strong>Maria Alice</strong></div>
     <div class="Autor">💎 Autor : <strong>Albert Dias</strong></div>
     <div class="Atendimento">🌻 Atendimento </div>
+
+<div class="theme-transition">
+  <div class="loading-box">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
 
     <div class="logo-area">
       <h1>
@@ -83,6 +97,17 @@
   <!-- BOTÃO CHATBOT -->
   <button id="botaoChat" title="Abrir ChatBot" aria-label="Abrir ChatBot">💬 ChatBot</button>
 
+
+<!-- BOTÃO TEMAS -->
+<div id="temaContainer">
+  <button id="botaoTema" title="Trocar Tema">🎨 Temas</button>
+  <ul id="listaTemas">
+    <li data-tema="girassol">Girassol 🌻</li>
+    <li data-tema="querubim">Querubim 🐷</li>
+  </ul>
+</div>
+
+
   <!-- PAINEL DO CHAT -->
   <div id="painelChat" class="modal">
     <div class="modal-content chat-panel" role="dialog" aria-modal="true" aria-label="ChatBot">
@@ -130,7 +155,7 @@
       <button id="saveEditBtn">Salvar Edição</button>
     </div>
   </div>
-
+   
   <!-- Mascote - Diamante -->
   <div id="mascote">
     <div id="fala-do-mascote"> Olá Girassol 🌻</div>
