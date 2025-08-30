@@ -1,13 +1,17 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-image:
-    radial-gradient(rgba(0, 50, 120, 0.04) 25%, transparent 25%),
-    linear-gradient(to bottom, #a1c4fd, #fcb69f);
-  background-size: 50px 50px, 100% 100%;
-  background-repeat: repeat, no-repeat;
-  color: #333;
+header {
+  background: #e6b97e; /* outro tom de marrom claro */
+  background-image: radial-gradient(rgba(93, 46, 11, 0.10) 30%, transparent 30%); /* bolinhas marrom escuro */
+  background-size: 20px 20px; /* bolinhas maiores */
+  background-repeat: repeat;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  color: #2d3436;
 }
+
 
 header {
   background: #f9ca24;
