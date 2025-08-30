@@ -17,7 +17,7 @@ body {
 header {
   background: #f9ca24; /* amarelo */
   background-image: radial-gradient(rgba(20, 90, 50, 0.10) 30%, transparent 30%);
-  background-size: 15px 15px;
+  background-size: 20px 20px;
   background-repeat: repeat;
   padding: 1.5rem 1rem;
   text-align: center;
