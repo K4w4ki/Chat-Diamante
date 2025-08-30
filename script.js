@@ -1386,7 +1386,7 @@ function aplicarTema(tema) {
     setTimeout(() => {
       overlay.classList.remove("active");
     }, 400); // fade out
-  }, 900); // loading
+  }, 1000); // loading
 }
 
 function aplicarTemaInterno(tema) {
@@ -1406,7 +1406,7 @@ function aplicarTemaInterno(tema) {
     if (atendimentoDiv) atendimentoDiv.textContent = "🐷 Atendimento";
     document.title = "Equipe Querubim • Atendimento Can 🐷";
     logoEquipe.textContent = "🐷 Equipe Querubim";
-    logoChat.textContent = "• Chat Can";
+    logoChat.textContent = "";
 
     // estilos texto
     logoEquipe.style.color = "#ffffff";
