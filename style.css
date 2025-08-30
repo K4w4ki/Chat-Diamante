@@ -2,17 +2,16 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
 
-  /* Fundo degradê verde + bolinhas verde escuro bem transparentes */
+  /* Fundo degradê azul claro → verde claro + bolinhas azul forte mais transparentes */
   background-image:
-    radial-gradient(rgba(0, 70, 32, 0.12) 20%, transparent 20%), /* bolinhas verde escuro bem suaves */
-    linear-gradient(to bottom, #a8e6a3, #2e8b57); /* degradê verde claro → verde forte */
+    radial-gradient(rgba(0, 0, 128, 0.05) 20%, transparent 20%), /* bolinhas azul escuro mais transparentes */
+    linear-gradient(to bottom, #a3c9e2, #a8e6a3); /* degradê azul claro → verde claro */
 
-  background-size: 50px 50px, 100% 100%; /* tamanho original das bolinhas */
+  background-size: 50px 50px, 100% 100%; /* tamanho das bolinhas e fundo */
   background-repeat: repeat, no-repeat;
 
   color: #333;
 }
-
 
 header {
   background: #f9ca24; /* amarelo */
@@ -27,7 +26,6 @@ header {
   z-index: 999;
   color: #2d3436;
 }
-
 
 header h1 {
   margin: 0 0 10px;
@@ -89,8 +87,6 @@ header h1 {
   transform: translateY(-50%) scale(1.2);
   opacity: 0.6;
 }
-
-
 
 main {
   padding: 2rem;
