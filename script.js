@@ -37,7 +37,7 @@ O protocolo da ocorrência é XXXXX. 🆔`
 
   {
     title: "DESCULPA",
-    content: `Peço desculpas em nome da natura pelo transtorno, viu? Mas espero poder ajudar da melhor forma possível!`
+    content: `🙏 Peço desculpas pelo transtorno em nome da Natura! Estou aqui para ajudar da melhor forma possível e garantir que tudo seja resolvido. 💛`
   },
 
 
@@ -88,17 +88,18 @@ Valor correto: R$
   {
     title: "Defeito - Solicitação | Beedoo",
     content: 
-`Para que consigamos abrir uma solicitação de defeito, peço que me informe alguns dados que estarei solicitando em seguida:
+`🔧 Para que eu possa abrir a sua solicitação de defeito, preciso que me ajude com as seguintes informações:
 
-Número do pedido: 	
-Código unitário do produto e quantidade: 
-Lote: 
-Validade:
-Estado da caixa do pedido: 
-Cheio, vazio ou pela metade: 
-Descrição do defeito:
-Imagem do produto defeituoso.
+📦 Número do pedido:
+🏷️ Código do produto + quantidade:
+🔢 Lote:
+📅 Validade:
+📦 Estado da caixa do pedido:
+⚖️ Está cheio, vazio ou pela metade?:
+⚠️ Descrição do defeito:
+📸 Foto do produto com defeito:
 
+👉 Você consegue me passar esses dados, por gentileza?
 https://naturaeavon.beedoo.io/wiki/447144/acuracidade-manifestacoes-de-qualidade
 `
 
@@ -107,12 +108,12 @@ https://naturaeavon.beedoo.io/wiki/447144/acuracidade-manifestacoes-de-qualidade
   {
     title: "Produto - FALTA",
     content: 
-`Para que consigamos abrir uma solicitação referente a falta do produto, peço que me informe alguns dados que estarei solicitando em seguida:
+`📝 Para que eu consiga abrir a sua solicitação de falta de produto, vou precisar de algumas informações:
 
-* Número do pedido: 	
-* Código unitário do produto e quantidade:
+* 📦 Número do pedido:
+* 🏷️ Código do produto + quantidade:
 
-Consegue me informar esses dados?
+👉 Você consegue me passar esses dados, por gentileza?
 `
 
   },
@@ -289,12 +290,13 @@ Agradecemos a compreensão e nos colocamos à disposição para eventuais dúvid
 	
   {
     title: "Bloqueio 19",
-    content: `Seu cadastro foi bloqueado por títulos cedidos para as nossas empresas parceiras. 
-Quando um título fica muito tempo vencido no sistema, a Natura&Co realiza a venda dos 
-mesmos, nossa principal parceira é a Recovery que você poderá contatar pelo telefone 
-(11) 4765-8402 e realizar dos boletos vendidos. Após realizar o pagamento de todos você 
-deverá solicitar a carta de quitação de títulos e nos enviar por aqui ou pelo e-mail 
-natconsultora@natura.net.`
+    content: `⚠️ Cadastro bloqueado
+
+Identificamos que seu cadastro foi bloqueado devido a títulos em aberto que foram cedidos para empresas parceiras.
+Quando um título permanece muito tempo em atraso, a Natura&Co realiza a venda desses débitos. Nossa principal parceira é a Recovery, que poderá ser contatada pelo telefone 📞 (11) 4765-8402 para negociação e emissão dos boletos.
+
+✅ Após efetuar o pagamento de todos os boletos, será necessário solicitar a carta de quitação de títulos e nos encaminhar por aqui mesmo ou pelo e-mail 📩 natconsultora@natura.net
+ `
   },
 
   {
@@ -323,21 +325,46 @@ Importante: esse bloqueio altera sua modalidade comercial para à vista. Futuras
 
 Devido à falta de interação no chat o nosso atendimento será encerrado! A Consultoria de Beleza agradece o seu contato e caso você precise retornar nós funcionamos de Seg a Sex das 07:00 às 22:00 - Sábado 09:00 ás 20:00. Uma boa tarde para você querida consultora e até breve!!`
   },
+	
   {
     title: "Impossibilidade Sistêmica",
-    content: `Devido a uma impossibilidade sistêmica não vai ser possível prosseguir com a sua solicitação no momento. Eu sinto muito pelo transtorno causado e peço que por gentileza, retornar contato em 1 hora, para que nós possamos prosseguir com a sua solicitação. A nossa central funciona de Seg à Sex das 07:00 às 22:00 - nos sábados das 09:00 ás 20:00h. Nós agradecemos a sua compreensão e um abraço da Consultoria de Beleza!`
+    content: `💻 Devido a uma indisponibilidade no sistema, não será possível prosseguir com a sua solicitação neste momento.
+🙏 Pedimos desculpas pelo transtorno e contamos com a sua compreensão.
+
+⏳ Por gentileza, pedimos que retorne o contato em aproximadamente 1 hora, para que possamos dar continuidade à sua solicitação.
+
+📅 Nossa central funciona:
+
+* Segunda a Sexta: 07h às 22h
+* Sábado: 09h às 20h
+
+✨ Agradecemos a sua paciência e deixamos um abraço da Consultoria de Beleza!`
   },
 
 
   {
     title: "SEM OS DADOS EM MÃOS",
-    content: `Se você não estiver as informações necessárias em mãos, peço que por gentileza, retorne mais tarde com os dados em mãos, para que possamos prosseguir com o seu atendimento e que não aconteca um congestionamento de fila de atendimento. Eu sinto muito pelo transtorno causado. A Consultoria de Beleza agradece o seu contato e caso você precise retornar nós funcionamos de Seg a Sex das 07:00 às 22:00 - Sábado 09:00 ás 20:00. Uma boa tarde para você querida consultora e até breve!!`
+    content: `💡 Caso você não tenha as informações necessárias em mãos agora, pedimos, por gentileza, que retorne mais tarde com os dados. Assim, conseguiremos dar continuidade ao seu atendimento sem causar congestionamento na fila.
+
+🙏 Pedimos desculpas pelo transtorno e agradecemos muito o seu contato.
+
+📅 Nosso horário de atendimento é:
+
+* Segunda a Sexta: 07h às 22h
+* Sábado: 09h às 20h
+
+✨ A Consultoria de Beleza deseja uma ótima tarde para você, querida consultora. Até breve! 🌷`
   },
 
   {
     title: "Pontuação - Aumento de pontos",
-    content: `Nós não possuimos autonomia para realizar o aumento dos seus pontos de crédito por aqui! Existem duas formas de aumentar os seus pontos, sendo a primeira opção, realizar o pagamento de títulos que 
-estejam em aberto, e a segunda opção, seria entrando em contato com a nossa assistente virtual pelo Whatsapp 11 93036-0000 e solicitar o aumento de pontos!`
+    content: `💳 Nós não temos autonomia para realizar o aumento dos seus pontos de crédito diretamente por aqui.
+Mas fique tranquila, existem duas formas de conseguir esse aumento:
+
+1️⃣ Pagando os títulos em aberto (caso existam).
+2️⃣ Entrando em contato com a nossa assistente virtual pelo WhatsApp 📲 (11) 93036-0000 e solicitando o aumento de pontos.
+
+✨ Assim você conseguirá regularizar sua situação e aumentar seu limite com mais facilidade!`
   },
 
   {
@@ -375,19 +402,18 @@ O sistema só permite a abertura dessa solicitação após a entrega do pedido, 
   },
   {
     title: "Acordo de Pagamento",
-    content: `As condições de parcelamento vão de acordo com a data escolhida para pagamento da primeira parcela do acordo. 
+    content: `💳 Para o parcelamento, você pode escolher a data da 1ª parcela entre: xx, xx, xx, xx ou xx/xxxx. Qual dessas datas fica melhor pra você? 😊
 
-O sistema liberou como data para pagamento da primeira parcela os dias xx,xx,xx,xx e xx de xxxx. Qual das datas informadas você prefere? 
+💰 As opções de pagamento disponíveis são:
 
-Foram liberadas as condições de pagamento abaixo:
-XXx de R$xxx,xx
-XXx de R$xxx,xx
-XXx de R$xxx,xx
-XXx de R$xxx,xx
-XXx de R$xxx,xx
-XXx de R$xxx,xx
+XXx de R$ xxx,xx
+XXx de R$ xxx,xx
+XXx de R$ xxx,xx
+XXx de R$ xxx,xx
+XXx de R$ xxx,xx
+XXx de R$ xxx,xx
 
-Como prefere prosseguir com a negociação?`
+✨ Me conta como você prefere prosseguir com a negociação, que vamos te ajudar rapidinho! 🙌`
   },
 	
   {
@@ -625,26 +651,33 @@ Horário de Atendimento: Seg a Sex das 8h as 20h \ Sábados das 9h as 20h
   },
   {
     title: "Captação de Pedido - Link",
-    content: ` CB COM PROBLEMA NO CAPTA, LINK DISPONÍVEL.
+    content: `
 http://pedidoscan.natura.net/captacao/consultar_pedido_CRM.html?codConsultora=26320096&origem=1`
   },
   {
     title: "Contatos EmanaPay",
-    content: `Negociação de boleto: 0800 646 2727
-Cartão EmanaPay: 0800 777 0006
-Contas EmanaPay: 0800 445 0009
-Seguros: 0800 237 1368
-Chat: https://suac.com/?08000008005`
+    content: `📞 Telefones de atendimento:
+
+* Negociação de boletos: 0800 646 2727
+* Cartão EmanaPay: 0800 777 0006
+* Contas EmanaPay: 0800 445 0009
+* Seguros: 0800 237 1368
+
+💬 Chat online: https://suac.com/?08000008005`
   },
+	
   {
     title: "Reembolso",
-    content: `Para que consigamos realizar o reembolso pra você, eu preciso que me informe os seguintes dados:
+    content: `💸 Para que possamos realizar o reembolso, preciso que você me informe os seguintes dados:
 
-Documento:
-Banco:
-Agência:
-Conta (em nome do titular): `
+📝 Documento:
+🏦 Banco:
+🏤 Agência:
+💳 Conta (em nome do titular):
+
+👉 Você consegue me passar essas informações, por favor?`
   }
+	
 ];
 
 function createSections() {
