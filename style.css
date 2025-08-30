@@ -12,21 +12,6 @@ header {
   color: #2d3436;
 }
 
-
-header {
-  background: #f9ca24;
-  background-image: radial-gradient(rgba(20, 90, 50, 0.10) 30%, transparent 30%);
-  background-size: 15px 15px;
-  background-repeat: repeat;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  color: #2d3436;
-}
-
 header h1 {
   margin: 0 0 10px;
   font-size: 2rem;
