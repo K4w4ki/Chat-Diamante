@@ -4,8 +4,8 @@ body {
 
   /* Fundo degradê azul claro → verde claro + bolinhas azul forte mais transparentes */
   background-image:
-    radial-gradient(rgba(0, 0, 128, 0.05) 20%, transparent 20%), /* bolinhas azul escuro mais transparentes */
-    linear-gradient(to bottom, #a3c9e2, #a8e6a3); /* degradê azul claro → verde claro */
+    radial-gradient(rgba(0, 0, 128, 0.05) 20%, transparent 20%),
+    linear-gradient(to bottom, #81D4FA, #FFAD66); /* azul → verde */
 
   background-size: 50px 50px, 100% 100%; /* tamanho das bolinhas e fundo */
   background-repeat: repeat, no-repeat;
@@ -1393,7 +1393,7 @@ button.create-btn:hover {
 
 /* Botão de Temas */
 #botaoTema {
-  background: #66BB66; /* azul claro */
+  background: #0095CC; /* azul claro */
   color: white;
   border: none;
   padding: 9px 17px;
@@ -1426,7 +1426,7 @@ button.create-btn:hover {
 
 /* Efeito no hover */
 #botaoTema:hover {
-  background: #145a32; /* azul escuro */
+  background: #4169E1; /* azul escuro */
 }
 
 #botaoTema:hover::before {
@@ -1442,8 +1442,6 @@ button.create-btn:hover {
     left: 125%;
   }
 }
-
-
 
 // TEMAS
 
@@ -1689,3 +1687,20 @@ button.create-btn:hover {
   }
 }
 
+.mascote-left,
+.mascote-right {
+  position: fixed;
+  top: 72px;          /* distância do topo */
+  width: 60px;        /* tamanho do mascote */
+  height: auto;
+  z-index: 1000;
+  opacity: 0.8; /* 0 = invisível | 1 = totalmente visível */
+}
+
+.mascote-left {
+  left: 310px;         /* alinha à esquerda */
+}
+
+.mascote-right {
+  right: 310px;        /* alinha à direita */
+}
