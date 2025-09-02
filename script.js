@@ -1429,6 +1429,10 @@ function aplicarTemaInterno(tema) {
   const atendimentoDiv = document.querySelector(".Atendimento");
   const mascoteImg = document.querySelector("#mascote img");
 
+  // seleciona os mascotes do header
+  const mascoteLeft = document.querySelector(".mascote-left");
+  const mascoteRight = document.querySelector(".mascote-right");
+
   // =====================
   // 🔹 Tema Querubim 🐷
   // =====================
@@ -1472,10 +1476,14 @@ function aplicarTemaInterno(tema) {
       "radial-gradient(rgba(240, 150, 120, 0.25) 25%, transparent 25%), linear-gradient(to bottom, #fcd5b5, #fcd5b5)";
     document.body.style.backgroundSize = "50px 50px, 100% 100%";
 
-    // mascote
+    // mascote principal
     mascoteImg.src = "mascote2.png";
     mascoteImg.alt = "Mascote Querubim";
     document.getElementById("fala-do-mascote").textContent = "Olá Querubim 🐷";
+
+    // mascotes do header somem
+    if (mascoteLeft) mascoteLeft.style.display = "none";
+    if (mascoteRight) mascoteRight.style.display = "none";
   }
 
   // =====================
@@ -1511,12 +1519,9 @@ function aplicarTemaInterno(tema) {
     mascoteImg.src = "mascote.png";
     mascoteImg.alt = "Mascote Girassol Diamante";
     document.getElementById("fala-do-mascote").textContent = "Olá Girassol 🌻";
+
+    // mascotes do header voltam
+    if (mascoteLeft) mascoteLeft.style.display = "block";
+    if (mascoteRight) mascoteRight.style.display = "block";
   }
 }
-
-// 🔹 Quando a aba volta a ficar ativa → reaplica o último tema
-document.addEventListener("visibilitychange", () => {
-  if (!document.hidden) {
-    aplicarTemaInterno(temaAtual);
-  }
-});
