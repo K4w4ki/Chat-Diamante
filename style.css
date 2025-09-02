@@ -48,6 +48,18 @@ header h1 {
   margin: 0 auto;
 }
 
+.versao {
+  position: absolute;
+  top: 12px;
+  right: 200px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2d3436; /* cor do texto igual ao resto do header */
+  background: rgba(255, 255, 255, 0.6); /* leve contraste */
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
 #searchInput {
   width: 100%;
   padding: 14px 22px 14px 50px;
