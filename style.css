@@ -1690,7 +1690,7 @@ button.create-btn:hover {
 .mascote-left,
 .mascote-right {
   position: fixed;
-  top: 72px;          /* distância do topo */
+  top: 71px;          /* distância do topo */
   width: 60px;        /* tamanho do mascote */
   height: auto;
   z-index: 1000;
@@ -1703,4 +1703,10 @@ button.create-btn:hover {
 
 .mascote-right {
   right: 310px;        /* alinha à direita */
+}
+
+.theme-transition.active ~ header .mascote-left,
+.theme-transition.active ~ header .mascote-right {
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
