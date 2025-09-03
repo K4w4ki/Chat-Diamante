@@ -202,6 +202,16 @@ Eu registrei a solicitação de cancelamento. A confirmação chegará por e-mai
 Ao registrar o cancelamento, infelizmente ocorreu um erro. Peço que você retorne assim que o seu pedido estiver em transporte. Você pode acompanhar o status pelo App/Site. 📲`
   },
 
+  {
+    title: "PRAZO EXPIRADO",
+    content: `Verifiquei aqui com muito cuidado o seu caso, e quero te explicar direitinho o que aconteceu.
+
+Infelizmente, não será possível abrir um protocolo para essa solicitação 😔, pois o prazo para abertura desse chamado é de 15 a 30 dias corridos após o recebimento do pedido.
+
+Entendo que essa não é a resposta que você esperava, e sinto muito mesmo por isso. 💛 Em nome da Natura, peço sinceras desculpas pelo transtorno causado.
+
+Se tiver qualquer outra dúvida, estou aqui pra isso, tá bom? 💬🌷`
+  },
 
   {
     title: "TRANSFERÊNCIA - SEMENTE 🌱",
