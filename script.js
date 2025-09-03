@@ -15,11 +15,11 @@ Em que posso te ajudar neste momento?`
 
   {
     title: "SOLICITAÇÃO DE DADOS",
-    content: `O seu e-mail e o seu telefone estão atualizados? 
+    content: `📧📞 O seu e-mail e o seu telefone estão atualizados?
 
-Me informa o seu e-mail e o seu telefone, por favor.
+📩 Você pode me informar o seu e-mail e o seu telefone, por favor?
 
-Me informa o seu e-mail e o seu telefone e o melhor horário para contato.`
+🕐 Pode me informar o seu e-mail, o seu telefone e o melhor horário para contato, por gentileza?`
   },
 
   {
@@ -43,48 +43,54 @@ O protocolo da ocorrência é XXXXX. 🆔`
 
   {
     title: "Dados - Confirnação.",
-    content: `Para que eu possa seguir com o atendimento, você poderia me informar o seu CPF + Nome completo, por gentileza?
+    content: `📝 Para que eu possa seguir com o atendimento, você poderia me informar o seu CPF e nome completo, por gentileza?
 `
   },
 
   {
     title: "REDE - Coleta de Dados",
-    content: `Nome completo da Cliente:
-CPF da Cliente:
-Número do pedido:
-Código unitário do produto e quantidade:
-Lote:
-Validade:
-Email da Cliente:
-Telefone da Cliente:
-Endereço da Cliente:
-CEP da Cliente:`
+    content: `📋 Para darmos sequência ao atendimento, por gentileza, informe os dados abaixo:
+
+👤 Nome completo da cliente:
+🧾 CPF da cliente:
+📦 Número do pedido:
+🏷️ Código unitário do produto e quantidade:
+🔢 Lote:
+📅 Validade:
+📧 E-mail da cliente:
+📞 Telefone da cliente:
+🏠 Endereço completo da cliente:
+📮 CEP da cliente:`
   },
 
   {
     title: "Recalculo / Promoção Não Aplicada",
-    content: ` **  Promoção não aplicada  **
+    content: `🔖 Promoção não aplicada
 
-Número do pedido:
-Código do produto e quantidade atingida:
-Valor devido:
-Valor cobrado:
-Email:
-Telefone:
-Promoção de revista ou app?
-Evidência:
+Para analisarmos a solicitação, por gentileza, encaminhe as seguintes informações:
 
-**  Recálculo da nota  **
+📦 Número do pedido:
+🏷️ Código do produto e quantidade atingida:
+💰 Valor devido:
+💳 Valor cobrado:
+📧 E-mail:
+📞 Telefone:
+🛍️ Promoção de revista ou app?:
+📸 Evidência (print ou foto):
 
-Nº Pedido:
-Ciclo:
-Nota fiscal (NF):
-Produto:
-Valor cobrado: R$
-Valor correto: R$
+🧾 Recálculo da nota fiscal
+
+Por favor, informe os dados abaixo para darmos sequência:
+
+📦 Número do pedido:
+📆 Ciclo:
+🧾 Nota Fiscal (NF):
+📦 Produto:
+💳 Valor cobrado: R$
+✅ Valor correto: R$
 `
-
   },
+	
   {
     title: "Defeito - Solicitação | Beedoo",
     content: 
@@ -98,11 +104,12 @@ Valor correto: R$
 ⚖️ Está cheio, vazio ou pela metade?:
 ⚠️ Descrição do defeito:
 📸 Foto do produto com defeito:
+📞 Telefone para contato:
+📧 E-mail para contato:
 
 👉 Você consegue me passar esses dados, por gentileza?
 https://naturaeavon.beedoo.io/wiki/447144/acuracidade-manifestacoes-de-qualidade
 `
-
   },
 
   {
@@ -139,7 +146,13 @@ https://naturaeavon.beedoo.io/wiki/322392/pos-compra
 	
   {
     title: "Protocolo Aberto",
-    content: `A ocorrência foi direcionada para o setor responsável. Número do Protocolo é o xxxxxx com previsão para a conclusão e resposta até o dia xx/xx, o retorno é feito por email. Lembrando que esta é apenas o prazo limite para respostas e a nossa equipe costuma entrar em contato muito antes que o informado! `
+    content: `📨 A ocorrência foi direcionada para o setor responsável.
+📝 Número do protocolo: xxxxxx
+⏳ Previsão para conclusão e resposta: até o dia xx/xx.
+
+O retorno será feito por e-mail. ✉️
+
+🔔 Lembrando que esse é apenas o prazo limite para a resposta — nossa equipe costuma entrar em contato bem antes da data informada! 😉 `
   },
 
   {
@@ -294,8 +307,13 @@ Agradecemos pela compreensão e seguimos à disposição para ajudar no que for 
 
   {
     title: "Bloqueio 5 - Cadastro com Fraude confirmada",
-    content: `Agradecemos seu interesse em atuar como Consultor(a) Natura. Informamos que realizamos uma análise interna do seu cadastro e, conforme as políticas vigentes da empresa, no momento não foi possível efetivar sua ativação. Ressaltamos que, de acordo com essas diretrizes, este processo não está elegível para reanálise ou desbloqueio.
-Agradecemos a compreensão e nos colocamos à disposição para eventuais dúvidas.`
+    content: `🌿 Agradecemos seu interesse em atuar como Consultor(a) Natura!
+
+Após uma análise interna do seu cadastro, informamos que, conforme as políticas vigentes da empresa, no momento não foi possível efetivar sua ativação.
+
+📌 Ressaltamos que, de acordo com essas diretrizes, este processo não está elegível para reanálise ou desbloqueio.
+
+Agradecemos sua compreensão 💚 e permanecemos à disposição para quaisquer dúvidas ou esclarecimentos.`
   },	
 	
   {
@@ -514,17 +532,19 @@ https://naturaeavon.beedoo.io/wiki/464839/minha-loja`
 	
   {
     title: "Tecnologia - B.O no Aplicativo | Beedoo",
-    content: `Para que possamos prosseguir com a solicitação, peço que me encaminhe os seguintes dados, por gentileza.
+    content: `📲 Para que possamos prosseguir com a solicitação, peço que me encaminhe os seguintes dados, por gentileza:
 
-Qual o modelo do celular:
-Versão do sistema Operacional:
-Qual o nome do aplicativo:
-Versão do Aplicativo:
-Já realizou a limpeza de cache?:
-Já tentou reinstalar o aplicativo?:
-Encaminhe uma evidência do problema.
+📱 Qual o modelo do celular:
+🛠️ Versão do sistema operacional:
+📌 Qual o nome do aplicativo:
+🔢 Versão do aplicativo:
+🧹 Já realizou a limpeza de cache?:
+🔄 Já tentou reinstalar o aplicativo?:
+📸 Encaminhe uma evidência do problema:
+📞 Telefone para contato:
+📧 E-mail para contato:
 
-****************************************************************************************************************
+==============================================================================================================
 
 Dados a parte para tabulação.
 
