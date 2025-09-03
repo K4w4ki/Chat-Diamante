@@ -256,6 +256,17 @@ Já vou te direcionar pra equipe certa, que vai te dar aquela força! 🧡`
   },
 
   {
+    title: "TRANSFERÊNCIA - REDE NATURA 🚀🌿",
+    content: `Para que você consiga seguir com a sua solicitação, será necessário que você entre em contato diretamente o Rede Natura, tudo bem?
+
+Você pode fazer isso de duas maneiras simples e práticas:
+
+📞 Pelo telefone: 0800-011-5566, onde eles vão te atender com toda atenção e agilidade que você merece.
+💬 Ou pelo chat online acessando o link: www.natura.com.br/ajuda-e-contato
+✨você pode falar com um atendente quando preferir!`
+  },
+	
+  {
     title: "Bloqueios Diversos | Beedoo",
     content: `CASOS PARA CONSULTORAS COM QUAISQUER OUTRO TIPO DE BLOQUEIO EM SUA CONTA, SEGUE A WIKI:
 
