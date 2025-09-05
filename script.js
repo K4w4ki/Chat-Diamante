@@ -48,22 +48,6 @@ O protocolo da ocorrência é XXXXX. 🆔`
   },
 
   {
-    title: "REDE - Coleta de Dados",
-    content: `📋 Para darmos sequência ao atendimento, por gentileza, informe os dados abaixo:
-
-👤 Nome completo da cliente:
-🧾 CPF da cliente:
-📦 Número do pedido:
-🏷️ Código unitário do produto e quantidade:
-🔢 Lote:
-📅 Validade:
-📧 E-mail da cliente:
-📞 Telefone da cliente:
-🏠 Endereço completo da cliente:
-📮 CEP da cliente:`
-  },
-
-  {
     title: "Recalculo / Promoção Não Aplicada",
     content: `🔖 Promoção não aplicada
 
@@ -374,9 +358,18 @@ Importante: esse bloqueio altera sua modalidade comercial para à vista. Futuras
 
   {
     title: "Falta de Interação",
-    content: `Protocolo aberto: XXXXXXXXXXXXXXX
+    content: `🔖 Protocolo aberto: XXXXXXXXXXXXXXX
 
-Devido à falta de interação no chat o nosso atendimento será encerrado! A Consultoria de Beleza agradece o seu contato e caso você precise retornar nós funcionamos de Seg a Sex das 07:00 às 22:00 - Sábado 09:00 ás 20:00. Uma boa tarde para você querida consultora e até breve!!`
+💬 Devido à falta de interação no chat, nosso atendimento será encerrado.
+
+🌸 A Consultoria de Beleza agradece o seu contato!
+
+⏰ Nosso horário de atendimento:
+
+• Segunda a Sexta: 07:00 às 22:00
+• Sábado: 09:00 às 20:00
+
+🌞 Agradecemos o seu contato, querida consultora! Até breve! 👋✨`
   },
 	
   {
@@ -449,9 +442,15 @@ Importante: o reembolso precisa ser feito em conta corrente em nome do titular, 
 	
   {
     title: "Status do Pedido",
-    content: `Essa solicitação só é permitida sistematicamente após o faturamento do pedido, peço que aguarde a atualização do status para "faturado em transporte" no seu app/site para conseguirmos prosseguir com esse caso. Tudo bem?
+    content: `🚨 Importante:
 
-O sistema só permite a abertura dessa solicitação após a entrega do pedido, aguarda a atualização do status para "entregue" no seu app/site e retorna conosco, por gentileza. `
+• Essa solicitação só pode ser feita pelo sistema após o faturamento do pedido.
+
+⏳ Peço que aguarde a atualização do status para "faturado em transporte" no seu app/site para que possamos prosseguir com o seu caso. Tudo bem?
+
+⚠️ O sistema permite a abertura dessa solicitação somente após a entrega do pedido.
+
+📲 Aguarde a atualização do status para "entregue" no seu app/site e, por favor, retorne para continuarmos com o atendimento. `
   },
   {
     title: "Acordo de Pagamento",
@@ -503,28 +502,39 @@ Obrigado por contribuir com a melhoria dos nossos serviços! 😊`
 
   {
     title: "Squid - Atendimento N1 – Prestar informações | Beedoo",
-    content: `deve orientar a CB Treinadora que realize abertura de chamado dentro da plataforma de treinamentos Squid nos casos abaixo:
+    content: `📝 Orientações para Abertura de Chamado na Plataforma Squid
 
-1 - Problemas de agendamento e reagendamento;
-2 - Problemas Técnicos com plataforma de transmissão;
-3 - Problema com o cálculo de pagamento ou regras de cálculo;
-4 - Dificuldades de subir NF;
-5 - E dúvidas e/ou questionamentos a respeito dos Relatórios automatizados de treinamentos realizados e/ou avaliação de treinamentos deverão ser encaminhadas para os canais de atendimento da Squid.
+• A CB Treinadora deve abrir chamado na plataforma de treinamentos Squid sempre que encontrar algum dos seguintes casos:
 
-* Whatsapp para contato com a Squid: +55 (11) 94897-2729
-* E-mail: meajuda.natura@squidit.com.br
+🚩 Casos que devem gerar abertura de chamado:
 
-Tabulação N1:
+1️⃣ Problemas de agendamento e reagendamento
+2️⃣ Problemas técnicos na plataforma de transmissão
+3️⃣ Problemas com cálculo de pagamento ou regras de cálculo
+4️⃣ Dificuldades para subir a Nota Fiscal (NF)
+5️⃣ Dúvidas e/ou questionamentos sobre Relatórios automatizados de treinamentos realizados e/ou avaliação de treinamentos
+👉 Estes devem ser encaminhados diretamente para os canais de atendimento da Squid.
 
-1 - Categorizar:
+📞 Canais de Atendimento Squid:
 
- * Primeira Categoria: Apoio a Atividade
- * Segunda Categoria: Recursos de apoio
- * Motivo: Treinamento
+• 📱 WhatsApp: +55 (11) 94897-2729
+• 📧 E-mail: meajuda.natura@squidit.com.br
+• 🔧 Procedimentos para abertura de chamado - Tabulação Nível 1 (N1):
 
-2 - Detalhar (OBRIGATÓRIAMENTE) no campo descrição as informações prestadas e o motivo do contato.​​
-3 - Selecionar a solução manual N1: Informação;
-4 - Clique em salvar ocorrência. (finalizadora da ocorrência) 
+1️⃣ Categorizar:
+
+• Primeira Categoria: Apoio a Atividade
+• Segunda Categoria: Recursos de apoio
+• Motivo: Treinamento
+
+2️⃣ Detalhar (OBRIGATÓRIO):
+No campo descrição, informe todas as informações prestadas e o motivo do contato.
+
+3️⃣ Selecionar solução manual N1:
+Escolher a opção Informação.
+
+4️⃣ Finalizar:
+Clique em Salvar ocorrência para concluir a abertura do chamado.
 
 https://naturaeavon.beedoo.io/wiki/403201/consultora-de-beleza-treinadora
 `
@@ -701,14 +711,17 @@ Horário de Atendimento: Seg a Sex das 8h as 20h \ Sábados das 9h as 20h
 
   {
     title: "Desistência de Pedido - Antes da Nota",
-    content: `Não foi possível cancelar o seu pedido agora, pois a nota fiscal ainda não foi emitida e o seu pedido não foi faturado.. Peço que retorne assim que o pedido constar com o status de " FATURADO E EM TRANSPORTE".
+    content: `❌ Não foi possível cancelar o seu pedido neste momento, pois a nota fiscal ainda não foi emitida e o pedido não foi faturado.
+
+⏳ Por favor, retorne assim que o status do pedido aparecer como "FATURADO E EM TRANSPORTE" para que possamos ajudar você..
 `
   },
+	
   {
     title: "Captação de Pedido - Link",
-    content: `
-http://pedidoscan.natura.net/captacao/consultar_pedido_CRM.html?codConsultora=26320096&origem=1`
+    content: `http://pedidoscan.natura.net/captacao/consultar_pedido_CRM.html?codConsultora=26320096&origem=1`
   },
+	
   {
     title: "Contatos EmanaPay",
     content: `📞 Telefones de atendimento:
@@ -725,7 +738,7 @@ http://pedidoscan.natura.net/captacao/consultar_pedido_CRM.html?codConsultora=26
     title: "Reembolso",
     content: `💸 Para que possamos realizar o reembolso, preciso que você me informe os seguintes dados:
 
-📝 Documento:
+📝 Documento ( CPF ):
 🏦 Banco:
 🏤 Agência:
 💳 Conta (em nome do titular):
