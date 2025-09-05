@@ -331,10 +331,11 @@ Agradecemos sua compreensão 💚 e permanecemos à disposição para quaisquer 
     title: "Bloqueio 19 - FIDC Ipanema",
     content: `🚫 Cadastro Bloqueado 🚫
 	
-Identificamos que seu cadastro está bloqueado por conta de títulos em aberto que foram cedidos para empresas parceiras.
-Para resolver essa situação, pedimos que você entre em contato diretamente com a empresa FIDC Ipanema, que está cuidando da negociação desses débitos.
+⚠️ Identificamos que seu cadastro está bloqueado por conta de títulos em aberto que foram cedidos para empresas parceiras.
 
-Aqui estão os dados para facilitar seu contato:
+📌 Para resolver essa situação, pedimos que você entre em contato diretamente com a empresa FIDC Ipanema, que está cuidando da negociação desses débitos.
+
+✅ Aqui estão os dados para facilitar seu contato:
 
 📞 Telefone e WhatsApp: 0800 025 0000
 🕗 Horário de Atendimento:
