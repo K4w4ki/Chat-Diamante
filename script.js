@@ -328,13 +328,25 @@ Agradecemos sua compreensão 💚 e permanecemos à disposição para quaisquer 
   },	
 	
   {
-    title: "Bloqueio 19",
-    content: `⚠️ Cadastro bloqueado
+    title: "Bloqueio 19 - FIDC Ipanema",
+    content: `Identificamos que seu cadastro está bloqueado por conta de títulos em aberto que foram cedidos para empresas parceiras.
 
-Identificamos que seu cadastro foi bloqueado devido a títulos em aberto que foram cedidos para empresas parceiras.
-Quando um título permanece muito tempo em atraso, a Natura&Co realiza a venda desses débitos. Nossa principal parceira é a Recovery, que poderá ser contatada pelo telefone 📞 (11) 4765-8402 para negociação e emissão dos boletos.
+Para resolver essa situação, pedimos que você entre em contato diretamente com a empresa FIDC Ipanema, que está cuidando da negociação desses débitos.
 
-✅ Após efetuar o pagamento de todos os boletos, será necessário solicitar a carta de quitação de títulos e nos encaminhar por aqui mesmo ou pelo e-mail 📩 natconsultora@natura.net
+Aqui estão os dados para facilitar seu contato:
+
+📞 Telefone e WhatsApp: 0800 025 0000
+🕗 Horário de Atendimento:
+  • Segunda a sexta: 8h às 20h
+  • Sábado: 8h às 14h
+  • (Exceto feriados)
+🌐 Site: https://negocieipanema.com.br/
+
+📧 E-mail: contato@negocieipanema.com.br
+
+✅ Depois de pagar todos os boletos, lembre-se de solicitar a carta de quitação e nos encaminhar por aqui mesmo ou pelo e-mail: natconsultora@natura.net
+
+Estamos aqui para ajudar no que precisar! 🤝
  `
   },
 
