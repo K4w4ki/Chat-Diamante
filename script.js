@@ -23,6 +23,12 @@ Em que posso te ajudar neste momento?`
   },
 
   {
+    title: "AUDIO 🎧 | Solicitação por Mensagens de texto 📝",
+    content: `Por gentileza, responda com mensagens de texto 📲, pois não conseguimos reproduzir os áudios 🎧. Assim fica mais fácil para a gente responder rapidinho! 😉 Muito obrigado pela compreensão! 🙏✨
+`
+  },
+
+  {
     title: "PROTOCOLO - REGISTRO",
     content: `• Modelo ∙ N2
 
