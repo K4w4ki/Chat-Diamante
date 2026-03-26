@@ -137,6 +137,70 @@ https://naturaeavon.beedoo.io/wiki/322392/pos-compra
         },
 
         {
+          title: " 📋 CHECKLIST OBRIGATÓRIO – DESISTÊNCIA DE PRODUTO",
+          content: `📞 Motivo do Contato:
+🗣️ (Detalhar conforme a voz da cliente/consultora)
+
+❓ Confirmação do Caso:
+📦 Cliente/Consultora informou que o produto foi entregue errado (erro de codificação ou captação)?
+➡️ Deseja desistir do produto
+🚫 Produto sem uso e lacrado
+
+📝 Dados do Produto:
+
+🏷️ Nome do produto:
+🔢 Código de Venda | Produto:
+📦 Estado do produto: (Aberto ou Fechado)
+🏭 Lote:
+
+📌 Observação:
+➡️ Caso o sistema não encontre o lote, registrar exatamente conforme informado pela cliente/consultora
+
+📅 Validade do produto:`,
+        },
+
+        {
+          title: " 📢 Autonomia para Abertura de Ocorrências | Exceções:",
+          content: `✅ Todos vocês têm autonomia para abrir ocorrências de exceção, conforme a necessidade e solicitação da Consultora durante o atendimento.
+🚫 Não é necessária validação prévia para esses protocolos, pois, nos casos abaixo, a Consultora tem direito à reparação:
+
+📦 Consultoras sem incorporação e sem vale-pontos após 2 ciclos
+➡️ Seguir o caminho:
+🛒 Compra > 🎟️ Cupom/Vale Pontos > 🔍 Análise de Vale Pontos
+
+🕵️‍♂️ Casos identificados em auditoria (falta não autorizada pela Consultora)
+➡️ Abrir como: ⚠️ Promoção Não Aplicada (paliativo)
+📝 Utilizar o pedido correto ou o último pedido entregue na descrição
+🔢 Incluir o ID da chamada no campo descrição
+
+🎁 Consultoras com direito a Vale-Pontos
+(Casos: indisponibilidade de brinde, corte ou prazo superior a 2 ciclos)
+
+🔎 Verificar disponibilidade no CAPTA:
+
+✔️ Se disponíveis:
+➡️ Abrir ocorrência em:
+🛒 Compra > 🎟️ Cupom/Vale Pontos > 🔍 Análise de Vale Pontos
+
+❌ Se indisponíveis:
+➡️ Solicitar que a Consultora escolha os produtos
+
+📝 Na descrição, incluir:
+• Motivo
+• Código dos produtos
+• Quantidade
+• Pontuação de cada item
+
+🔄 Desistência de Produtos
+✅ Todos têm autonomia para abrir a ocorrência
+📊 Avaliar o histórico da Consultora antes
+
+⚠️ Importante:
+📌 No Beedoo, a ocorrência deve ser aberta apenas para produtos sem uso`,
+			
+        },
+		  
+        {
           title: "Protocolo Aberto",
           content: `📨 A ocorrência foi direcionada para o setor responsável.
 📝 Número do protocolo: xxxxxx
